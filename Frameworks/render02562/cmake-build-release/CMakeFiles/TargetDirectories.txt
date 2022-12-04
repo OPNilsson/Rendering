@@ -1,0 +1,4 @@
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake-build-release/CMakeFiles/SOIL.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake-build-release/CMakeFiles/raytrace.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake-build-release/CMakeFiles/edit_cache.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake-build-release/CMakeFiles/rebuild_cache.dir
