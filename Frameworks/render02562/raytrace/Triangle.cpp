@@ -97,24 +97,22 @@ bool Triangle::intersect(const Ray& r, HitInfo& hit, unsigned int prim_idx) cons
     float t = f * optix::dot(edge2, q);
     if (t > epsilon) // ray intersection
     {
-        hit.has_hit = true;
-        hit.dist = t;
-        hit.position = r.origin + t * r.direction;
-        hit.geometric_normal = optix::normalize(optix::cross(edge1, edge2));
-        hit.shading_normal = hit.geometric_normal;
-        hit.material = &material;
+            hit.has_hit = true;
+            hit.dist = t;
+            hit.position = r.origin + t * r.direction;
+            hit.geometric_normal = optix::normalize(optix::cross(edge1, edge2));
+            hit.shading_normal = hit.geometric_normal;
+            hit.material = &material;
 
-        if (material.has_texture)
-        {
-            hit.texcoord = (1 - u - v) * t0 + u * t1 + v * t2;
-        }
+            if (material.has_texture)
+            {
+                hit.texcoord = (1 - u - v) * t0 + u * t1 + v * t2;
+            }
 
-        return true;
+            return true;
     }
-    else // This means that there is a line intersection but not a ray intersection.
-        return false;
-
-  return false;
+     // This means that there is a line intersection but not a ray intersection.
+     return false;
 }
 
 void Triangle::transform(const Matrix4x4& m) 

@@ -40,6 +40,9 @@ bool Plane::intersect(const Ray& r, HitInfo& hit, unsigned int prim_idx) const
   // Hint: The OptiX math library has a function dot(v, w) which returns
   //       the dot product of the vectors v and w.
 
+  if(hit.trace_depth > 0)
+    return false;
+
   // If the ray is parallel to the plane, there is no intersection
     if(dot(r.direction, onb.m_normal) == 0.0f){
         return false;
@@ -117,7 +120,6 @@ void Plane::get_uv(const float3& hit_pos, float& u, float& v) const
   // position           (origin of the plane)
   // onb                (orthonormal basis of the plane: normal [n], tangent [b1], binormal [b2])
   // tex_scale          (constant for scaling the texture coordinates)
-
 
     u =  tex_scale * dot(onb.m_tangent, (hit_pos - position));
     v = tex_scale * dot(onb.m_binormal, (hit_pos - position));

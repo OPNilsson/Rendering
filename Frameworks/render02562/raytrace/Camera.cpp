@@ -65,8 +65,8 @@ float3 Camera::get_ray_dir(const float2& coords) const
   // ip_yaxis   (the 2nd basis vector, b_2)
   // ip_normal  (the viewing direction and the 3rd basis vector, v)
   // d          (the camera constant, d)
+
   float3 q = ip_xaxis * coords.x + ip_yaxis * coords.y + ip_normal * cam_const;
-  float3 abs_q = make_float3(abs(q.x), abs(q.y), abs(q.z));
   return normalize(q);
 }
 
@@ -80,7 +80,7 @@ Ray Camera::get_ray(const float2& coords) const
   // Hint: You can set the ray type to 0 as the framework currently
   //       does not use different ray types.
 
-    return Ray(eye ,get_ray_dir(coords),0,0,RT_DEFAULT_MAX);
+    return Ray(eye ,get_ray_dir(coords),0,0.01f,RT_DEFAULT_MAX);
 }
 
 // OpenGL

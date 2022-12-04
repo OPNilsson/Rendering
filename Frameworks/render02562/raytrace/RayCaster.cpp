@@ -14,8 +14,6 @@ using namespace optix;
 
 float3 RayCaster::compute_pixel(unsigned int x, unsigned int y) const
 {
-  float3 result = make_float3(1.0f, 0.0f, 0.0f); // Default color is red
-
   // Use the scene and its camera
   // to cast a ray that computes the color of the pixel at index (x, y).
   //
@@ -33,15 +31,19 @@ float3 RayCaster::compute_pixel(unsigned int x, unsigned int y) const
   //            intersected material after the ray has been traced.
   //        (b) Use get_background(...) if the ray does not hit anything.
 
-    float2 pos = make_float2(x, y) * win_to_ip + lower_left;
+  float3 result;
+  float2 pos = make_float2(x, y) * win_to_ip + lower_left;
 
-    Ray r = scene->get_camera()->get_ray(pos);
-    HitInfo hit;
+  Ray r = scene->get_camera()->get_ray(pos);
+  HitInfo hit;
 
-    scene->closest_hit(r, hit);
+  scene->closest_hit(r, hit);
 
+    // Perhaps handle the case where the ray has hit more than one object using the hit.trace_depth variable.
+    // Right now the plane is the first thing that is hit, and the sphere is the second thing that is hit.
+    // The plane is the first thing that is hit because it is the first thing that is added to the scene.
+    // We either need to add the plane last, or we need to implement a back hit on the plane to draw the scene correctly.
     if (hit.has_hit) {
-        // Check if the hit opject is a sphere
         result = get_shader(hit)->shade(r, hit);
     }else {
         result = get_background();

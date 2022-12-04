@@ -313,7 +313,9 @@ void RenderEngine::render()
     // image   (flat array of rgb color vectors with res.x*res.y elements)
     // tracer  (ray tracer with access to the function compute_pixel)
     for (int x = 0; x < static_cast<int> (res.x); x++){
-        image[x + y * res.x] = tracer.compute_pixel(x,y);
+        float aspect_ratio = res.x / res.y;
+        float2 coords =  1.0f / res.y * make_float2(x, y) + 0.5f * make_float2(1.0f / res.x - aspect_ratio, 1.0f / res.y - 1.0f);
+        image[y * res.x + x] = tracer.compute_pixel(x, y);
     }
 
     if(((y + 1) % 50) == 0)

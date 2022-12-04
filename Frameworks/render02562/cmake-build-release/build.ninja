@@ -55,6 +55,8 @@ build CMakeFiles/SOIL.dir/SOIL/SOIL.c.obj: C_COMPILER__SOIL_Release D$:/Document
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\SOIL.dir
   OBJECT_FILE_DIR = CMakeFiles\SOIL.dir\SOIL
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
+  TARGET_PDB = libSOIL.pdb
 
 build CMakeFiles/SOIL.dir/SOIL/image_DXT.c.obj: C_COMPILER__SOIL_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL/image_DXT.c || cmake_object_order_depends_target_SOIL
   DEP_FILE = CMakeFiles\SOIL.dir\SOIL\image_DXT.c.obj.d
@@ -62,6 +64,8 @@ build CMakeFiles/SOIL.dir/SOIL/image_DXT.c.obj: C_COMPILER__SOIL_Release D$:/Doc
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\SOIL.dir
   OBJECT_FILE_DIR = CMakeFiles\SOIL.dir\SOIL
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
+  TARGET_PDB = libSOIL.pdb
 
 build CMakeFiles/SOIL.dir/SOIL/image_helper.c.obj: C_COMPILER__SOIL_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL/image_helper.c || cmake_object_order_depends_target_SOIL
   DEP_FILE = CMakeFiles\SOIL.dir\SOIL\image_helper.c.obj.d
@@ -69,6 +73,8 @@ build CMakeFiles/SOIL.dir/SOIL/image_helper.c.obj: C_COMPILER__SOIL_Release D$:/
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\SOIL.dir
   OBJECT_FILE_DIR = CMakeFiles\SOIL.dir\SOIL
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
+  TARGET_PDB = libSOIL.pdb
 
 build CMakeFiles/SOIL.dir/SOIL/stb_image.c.obj: C_COMPILER__SOIL_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL/stb_image.c || cmake_object_order_depends_target_SOIL
   DEP_FILE = CMakeFiles\SOIL.dir\SOIL\stb_image.c.obj.d
@@ -76,6 +82,8 @@ build CMakeFiles/SOIL.dir/SOIL/stb_image.c.obj: C_COMPILER__SOIL_Release D$:/Doc
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\SOIL.dir
   OBJECT_FILE_DIR = CMakeFiles\SOIL.dir\SOIL
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
+  TARGET_PDB = libSOIL.pdb
 
 build CMakeFiles/SOIL.dir/SOIL/stb_image_write.c.obj: C_COMPILER__SOIL_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL/stb_image_write.c || cmake_object_order_depends_target_SOIL
   DEP_FILE = CMakeFiles\SOIL.dir\SOIL\stb_image_write.c.obj.d
@@ -83,6 +91,8 @@ build CMakeFiles/SOIL.dir/SOIL/stb_image_write.c.obj: C_COMPILER__SOIL_Release D
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\SOIL.dir
   OBJECT_FILE_DIR = CMakeFiles\SOIL.dir\SOIL
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
+  TARGET_PDB = libSOIL.pdb
 
 
 # =============================================================================
@@ -97,8 +107,9 @@ build libSOIL.a: C_STATIC_LIBRARY_LINKER__SOIL_Release CMakeFiles/SOIL.dir/SOIL/
   OBJECT_DIR = CMakeFiles\SOIL.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\SOIL.dir\SOIL.pdb
   TARGET_FILE = libSOIL.a
-  TARGET_PDB = SOIL.a.dbg
+  TARGET_PDB = libSOIL.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target raytrace
@@ -115,6 +126,8 @@ build CMakeFiles/raytrace.dir/raytrace/Accelerator.cpp.obj: CXX_COMPILER__raytra
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/AreaLight.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/AreaLight.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\AreaLight.cpp.obj.d
@@ -122,6 +135,8 @@ build CMakeFiles/raytrace.dir/raytrace/AreaLight.cpp.obj: CXX_COMPILER__raytrace
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/BRDF.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/BRDF.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\BRDF.cpp.obj.d
@@ -129,6 +144,8 @@ build CMakeFiles/raytrace.dir/raytrace/BRDF.cpp.obj: CXX_COMPILER__raytrace_Rele
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/BspTree.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/BspTree.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\BspTree.cpp.obj.d
@@ -136,6 +153,8 @@ build CMakeFiles/raytrace.dir/raytrace/BspTree.cpp.obj: CXX_COMPILER__raytrace_R
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Camera.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Camera.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Camera.cpp.obj.d
@@ -143,6 +162,8 @@ build CMakeFiles/raytrace.dir/raytrace/Camera.cpp.obj: CXX_COMPILER__raytrace_Re
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Directional.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Directional.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Directional.cpp.obj.d
@@ -150,6 +171,8 @@ build CMakeFiles/raytrace.dir/raytrace/Directional.cpp.obj: CXX_COMPILER__raytra
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Distribution1D.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Distribution1D.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Distribution1D.cpp.obj.d
@@ -157,6 +180,8 @@ build CMakeFiles/raytrace.dir/raytrace/Distribution1D.cpp.obj: CXX_COMPILER__ray
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Distribution2D.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Distribution2D.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Distribution2D.cpp.obj.d
@@ -164,6 +189,8 @@ build CMakeFiles/raytrace.dir/raytrace/Distribution2D.cpp.obj: CXX_COMPILER__ray
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/GLViewController.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/GLViewController.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\GLViewController.cpp.obj.d
@@ -171,6 +198,8 @@ build CMakeFiles/raytrace.dir/raytrace/GLViewController.cpp.obj: CXX_COMPILER__r
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Gamma.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Gamma.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Gamma.cpp.obj.d
@@ -178,6 +207,8 @@ build CMakeFiles/raytrace.dir/raytrace/Gamma.cpp.obj: CXX_COMPILER__raytrace_Rel
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Glossy.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Glossy.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Glossy.cpp.obj.d
@@ -185,6 +216,8 @@ build CMakeFiles/raytrace.dir/raytrace/Glossy.cpp.obj: CXX_COMPILER__raytrace_Re
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/GlossyVolume.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/GlossyVolume.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\GlossyVolume.cpp.obj.d
@@ -192,6 +225,8 @@ build CMakeFiles/raytrace.dir/raytrace/GlossyVolume.cpp.obj: CXX_COMPILER__raytr
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/HDRTexture.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/HDRTexture.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\HDRTexture.cpp.obj.d
@@ -199,6 +234,8 @@ build CMakeFiles/raytrace.dir/raytrace/HDRTexture.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Holdout.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Holdout.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Holdout.cpp.obj.d
@@ -206,6 +243,8 @@ build CMakeFiles/raytrace.dir/raytrace/Holdout.cpp.obj: CXX_COMPILER__raytrace_R
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/InvSphereMap.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/InvSphereMap.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\InvSphereMap.cpp.obj.d
@@ -213,6 +252,8 @@ build CMakeFiles/raytrace.dir/raytrace/InvSphereMap.cpp.obj: CXX_COMPILER__raytr
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Lambertian.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Lambertian.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Lambertian.cpp.obj.d
@@ -220,6 +261,8 @@ build CMakeFiles/raytrace.dir/raytrace/Lambertian.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/MCGlossy.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/MCGlossy.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\MCGlossy.cpp.obj.d
@@ -227,6 +270,8 @@ build CMakeFiles/raytrace.dir/raytrace/MCGlossy.cpp.obj: CXX_COMPILER__raytrace_
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/MerlShader.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/MerlShader.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\MerlShader.cpp.obj.d
@@ -234,6 +279,8 @@ build CMakeFiles/raytrace.dir/raytrace/MerlShader.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/MerlTexture.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/MerlTexture.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\MerlTexture.cpp.obj.d
@@ -241,6 +288,8 @@ build CMakeFiles/raytrace.dir/raytrace/MerlTexture.cpp.obj: CXX_COMPILER__raytra
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Mirror.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Mirror.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Mirror.cpp.obj.d
@@ -248,6 +297,8 @@ build CMakeFiles/raytrace.dir/raytrace/Mirror.cpp.obj: CXX_COMPILER__raytrace_Re
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/PanoramicLight.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/PanoramicLight.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\PanoramicLight.cpp.obj.d
@@ -255,6 +306,8 @@ build CMakeFiles/raytrace.dir/raytrace/PanoramicLight.cpp.obj: CXX_COMPILER__ray
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/PanoramicTexture.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/PanoramicTexture.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\PanoramicTexture.cpp.obj.d
@@ -262,6 +315,8 @@ build CMakeFiles/raytrace.dir/raytrace/PanoramicTexture.cpp.obj: CXX_COMPILER__r
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/ParticleTracer.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/ParticleTracer.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\ParticleTracer.cpp.obj.d
@@ -269,6 +324,8 @@ build CMakeFiles/raytrace.dir/raytrace/ParticleTracer.cpp.obj: CXX_COMPILER__ray
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/PathTracer.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/PathTracer.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\PathTracer.cpp.obj.d
@@ -276,6 +333,8 @@ build CMakeFiles/raytrace.dir/raytrace/PathTracer.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Phong.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Phong.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Phong.cpp.obj.d
@@ -283,6 +342,8 @@ build CMakeFiles/raytrace.dir/raytrace/Phong.cpp.obj: CXX_COMPILER__raytrace_Rel
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/PhotonCaustics.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/PhotonCaustics.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\PhotonCaustics.cpp.obj.d
@@ -290,6 +351,8 @@ build CMakeFiles/raytrace.dir/raytrace/PhotonCaustics.cpp.obj: CXX_COMPILER__ray
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Plane.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Plane.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Plane.cpp.obj.d
@@ -297,6 +360,8 @@ build CMakeFiles/raytrace.dir/raytrace/Plane.cpp.obj: CXX_COMPILER__raytrace_Rel
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/PointLight.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/PointLight.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\PointLight.cpp.obj.d
@@ -304,6 +369,8 @@ build CMakeFiles/raytrace.dir/raytrace/PointLight.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/QuatTrackBall.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/QuatTrackBall.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\QuatTrackBall.cpp.obj.d
@@ -311,6 +378,8 @@ build CMakeFiles/raytrace.dir/raytrace/QuatTrackBall.cpp.obj: CXX_COMPILER__rayt
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Randomizer.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Randomizer.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Randomizer.cpp.obj.d
@@ -318,6 +387,8 @@ build CMakeFiles/raytrace.dir/raytrace/Randomizer.cpp.obj: CXX_COMPILER__raytrac
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/RayCaster.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/RayCaster.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\RayCaster.cpp.obj.d
@@ -325,6 +396,8 @@ build CMakeFiles/raytrace.dir/raytrace/RayCaster.cpp.obj: CXX_COMPILER__raytrace
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/RayTracer.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/RayTracer.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\RayTracer.cpp.obj.d
@@ -332,6 +405,8 @@ build CMakeFiles/raytrace.dir/raytrace/RayTracer.cpp.obj: CXX_COMPILER__raytrace
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/RenderEngine.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/RenderEngine.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\RenderEngine.cpp.obj.d
@@ -339,6 +414,8 @@ build CMakeFiles/raytrace.dir/raytrace/RenderEngine.cpp.obj: CXX_COMPILER__raytr
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Scene.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Scene.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Scene.cpp.obj.d
@@ -346,6 +423,8 @@ build CMakeFiles/raytrace.dir/raytrace/Scene.cpp.obj: CXX_COMPILER__raytrace_Rel
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Sphere.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Sphere.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Sphere.cpp.obj.d
@@ -353,6 +432,8 @@ build CMakeFiles/raytrace.dir/raytrace/Sphere.cpp.obj: CXX_COMPILER__raytrace_Re
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/SphereTexture.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/SphereTexture.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\SphereTexture.cpp.obj.d
@@ -360,6 +441,8 @@ build CMakeFiles/raytrace.dir/raytrace/SphereTexture.cpp.obj: CXX_COMPILER__rayt
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Texture.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Texture.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Texture.cpp.obj.d
@@ -367,6 +450,8 @@ build CMakeFiles/raytrace.dir/raytrace/Texture.cpp.obj: CXX_COMPILER__raytrace_R
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Textured.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Textured.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Textured.cpp.obj.d
@@ -374,6 +459,8 @@ build CMakeFiles/raytrace.dir/raytrace/Textured.cpp.obj: CXX_COMPILER__raytrace_
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Transparent.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Transparent.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Transparent.cpp.obj.d
@@ -381,6 +468,8 @@ build CMakeFiles/raytrace.dir/raytrace/Transparent.cpp.obj: CXX_COMPILER__raytra
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/TriMesh.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/TriMesh.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\TriMesh.cpp.obj.d
@@ -388,6 +477,8 @@ build CMakeFiles/raytrace.dir/raytrace/TriMesh.cpp.obj: CXX_COMPILER__raytrace_R
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Triangle.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Triangle.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Triangle.cpp.obj.d
@@ -395,6 +486,8 @@ build CMakeFiles/raytrace.dir/raytrace/Triangle.cpp.obj: CXX_COMPILER__raytrace_
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/Volume.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/Volume.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\Volume.cpp.obj.d
@@ -402,6 +495,8 @@ build CMakeFiles/raytrace.dir/raytrace/Volume.cpp.obj: CXX_COMPILER__raytrace_Re
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/obj_load.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/obj_load.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\obj_load.cpp.obj.d
@@ -409,6 +504,8 @@ build CMakeFiles/raytrace.dir/raytrace/obj_load.cpp.obj: CXX_COMPILER__raytrace_
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/raytrace.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/raytrace.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\raytrace.cpp.obj.d
@@ -416,6 +513,8 @@ build CMakeFiles/raytrace.dir/raytrace/raytrace.cpp.obj: CXX_COMPILER__raytrace_
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 build CMakeFiles/raytrace.dir/raytrace/string_utils.cpp.obj: CXX_COMPILER__raytrace_Release D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/raytrace/string_utils.cpp || cmake_object_order_depends_target_raytrace
   DEP_FILE = CMakeFiles\raytrace.dir\raytrace\string_utils.cpp.obj.d
@@ -423,6 +522,8 @@ build CMakeFiles/raytrace.dir/raytrace/string_utils.cpp.obj: CXX_COMPILER__raytr
   INCLUDES = -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562 -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/SOIL -ID:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/3rdparty/include -I"C:/Program Files (x86)/NVIDIA Corporation/Cg/include"
   OBJECT_DIR = CMakeFiles\raytrace.dir
   OBJECT_FILE_DIR = CMakeFiles\raytrace.dir\raytrace
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 
 # =============================================================================
@@ -438,9 +539,10 @@ build D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Framewo
   OBJECT_DIR = CMakeFiles\raytrace.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\raytrace.dir\
   TARGET_FILE = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.exe
   TARGET_IMPLIB = libraytrace.dll.a
-  TARGET_PDB = raytrace.exe.dbg
+  TARGET_PDB = D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render02562\bin\raytrace.pdb
 
 
 #############################################
@@ -496,14 +598,14 @@ build all: phony libSOIL.a D$:/Documents/School/Denmark/2022/Fall/Rendering/Jour
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/CMakeLists.txt D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake/FindMYGLUT.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/configuration.h.in
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/CMakeLists.txt D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake/FindMYGLUT.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/configuration.h.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/CMakeLists.txt D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake/FindMYGLUT.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/configuration.h.in: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeRCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/CMakeLists.txt D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/cmake/FindMYGLUT.cmake D$:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/configuration.h.in: phony
 
 
 #############################################

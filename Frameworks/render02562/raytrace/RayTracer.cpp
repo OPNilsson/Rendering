@@ -10,69 +10,99 @@
 
 using namespace optix;
 
-bool RayTracer::trace_reflected(const Ray& in, const HitInfo& in_hit, Ray& out, HitInfo& out_hit) const
-{
-  // Initialize the reflected ray and trace it.
-  //
-  // Input:  in         (the ray to be reflected)
-  //         in_hit     (info about the ray-surface intersection)
-  //
-  // Output: out        (the reflected ray)
-  //         out_hit    (info about the reflected ray)
-  //
-  // Return: true if the reflected ray hit anything
-  //
-  // Hints: (a) There is a reflect function available in the OptiX math library.
-  //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
-  return false;
+bool RayTracer::trace_reflected(const Ray &in, const HitInfo &in_hit, Ray &out, HitInfo &out_hit) const {
+    // Initialize the reflected ray and trace it.
+    //
+    // Input:  in         (the ray to be reflected)
+    //         in_hit     (info about the ray-surface intersection)
+    //
+    // Output: out        (the reflected ray)
+    //         out_hit    (info about the reflected ray)
+    //
+    // Return: true if the reflected ray hit anything
+    //
+    // Hints: (a) There is a reflect function available in the OptiX math library.
+    //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
+
+    // Initialize the reflected ray
+    out.origin = in_hit.position;
+    out.direction = reflect(in.direction, in_hit.geometric_normal);
+    out.tmin = in.tmin;
+    out.tmax = RT_DEFAULT_MAX;
+    out.ray_type = in.ray_type;
+
+    // Trace the reflected ray
+    // Check if the reflected ray hit anything
+    if (scene->closest_hit(out, out_hit)) {
+        // Set out_hit.ray_ior and out_hit.trace_depth
+        out_hit.ray_ior = in_hit.ray_ior;
+        out_hit.trace_depth = in_hit.trace_depth + 1;
+        return true;
+    }
+
+    return false;
 }
 
-bool RayTracer::trace_refracted(const Ray& in, const HitInfo& in_hit, Ray& out, HitInfo& out_hit) const
-{
-  // Initialize the refracted ray and trace it.
-  //
-  // Input:  in         (the ray to be refracted)
-  //         in_hit     (info about the ray-surface intersection)
-  //
-  // Output: out        (the refracted ray)
-  //         out_hit    (info about the refracted ray)
-  //
-  // Return: true if the refracted ray hit anything
-  //
-  // Hints: (a) There is a refract function available in the OptiX math library.
-  //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
-  //        (c) Remember that the function must handle total internal reflection.
-  return false;
+bool RayTracer::trace_refracted(const Ray &in, const HitInfo &in_hit, Ray &out, HitInfo &out_hit) const {
+    // Initialize the refracted ray and trace it.
+    //
+    // Input:  in         (the ray to be refracted)
+    //         in_hit     (info about the ray-surface intersection)
+    //
+    // Output: out        (the refracted ray)
+    //         out_hit    (info about the refracted ray)
+    //
+    // Return: true if the refracted ray hit anything
+    //
+    // Hints: (a) There is a refract function available in the OptiX math library.
+    //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
+    //        (c) Remember that the function must handle total internal reflection.
+
+    float3 normal;
+    const float eta1 = in_hit.ray_ior;
+    const float eta2 = get_ior_out(in, in_hit, normal);
+
+    const bool ref= refract(out.direction,in.direction,normal,eta2/eta1);
+    if (!ref) {
+        return false;
+    }
+    out.origin = (in_hit.position);
+    out.tmax = RT_DEFAULT_MAX;
+    out.tmin = 1e-4;
+    out_hit.ray_ior = eta2;
+    if (trace_to_closest(out, out_hit)) {
+        out_hit.trace_depth = in_hit.trace_depth + 1;
+        return true;
+    }
+
+    return false;
 }
 
-bool RayTracer::trace_refracted(const Ray& in, const HitInfo& in_hit, Ray& out, HitInfo& out_hit, float& R) const
-{
-  // Initialize the refracted ray and trace it.
-  // Compute the Fresnel reflectance (see fresnel.h) and return it in R.
-  //
-  // Input:  in         (the ray to be refracted)
-  //         in_hit     (info about the ray-surface intersection)
-  //
-  // Output: out        (the refracted ray)
-  //         out_hit    (info about the refracted ray)
-  //
-  // Return: true if the refracted ray hit anything
-  //
-  // Hints: (a) There is a refract function available in the OptiX math library.
-  //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
-  //        (c) Remember that the function must handle total internal reflection.
-  R = 0.1;
-  return trace_refracted(in, in_hit, out, out_hit);
+bool RayTracer::trace_refracted(const Ray &in, const HitInfo &in_hit, Ray &out, HitInfo &out_hit, float &R) const {
+    // Initialize the refracted ray and trace it.
+    // Compute the Fresnel reflectance (see fresnel.h) and return it in R.
+    //
+    // Input:  in         (the ray to be refracted)
+    //         in_hit     (info about the ray-surface intersection)
+    //
+    // Output: out        (the refracted ray)
+    //         out_hit    (info about the refracted ray)
+    //
+    // Return: true if the refracted ray hit anything
+    //
+    // Hints: (a) There is a refract function available in the OptiX math library.
+    //        (b) Set out_hit.ray_ior and out_hit.trace_depth.
+    //        (c) Remember that the function must handle total internal reflection.
+    R = 0.1;
+    return trace_refracted(in, in_hit, out, out_hit);
 }
 
-float RayTracer::get_ior_out(const Ray& in, const HitInfo& in_hit, float3& normal) const
-{
-  normal = in_hit.shading_normal;
-	if(dot(normal, in.direction) > 0.0)
-	{
-    normal = -normal;
-    return 1.0f;
-  }
-  const ObjMaterial* m = in_hit.material;
-  return m ? m->ior : 1.0f;
+float RayTracer::get_ior_out(const Ray &in, const HitInfo &in_hit, float3 &normal) const {
+    normal = in_hit.shading_normal;
+    if (dot(normal, in.direction) > 0.0) {
+        normal = -normal;
+        return 1.0f;
+    }
+    const ObjMaterial *m = in_hit.material;
+    return m ? m->ior : 1.0f;
 }

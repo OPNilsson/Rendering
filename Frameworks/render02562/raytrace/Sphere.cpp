@@ -39,92 +39,56 @@ bool Sphere::intersect(const Ray& r, HitInfo& hit, unsigned int prim_idx) const
   //            discriminant is zero separately.
 
   // Setup the quadratic equation
-  float b = dot((r.origin - center), r.direction);
+  float a = dot(r.direction, r.direction); // a = 1 according to the lecture slides
+  float b_2 = dot((r.origin - center), r.direction); // b/2
+  float b = 2 * b_2;
   float c = dot((r.origin - center), (r.origin - center)) - (radius * radius);
 
-  // Calculate distance to the intersection point(s)
-  float t_1 = -b - sqrt((b * b) - c);
-  float t_2 = -b + sqrt((b * b) - c);
+// Calculate the discriminant
+float discriminant = (b * b) - 4 * a * c;
 
   // No intersection if b^2 - c < 0
-    if ((b * b) - c < 0.0f){
-        return false;
-    }
-
-    // Check if the ray is inside the sphere
-    if (dot(r.origin - center, r.origin - center) < radius * radius){
-        // If the ray is inside the sphere, the intersection point is the ray origin
-        hit.has_hit = true;
-        hit.dist = 0.0f;
-        hit.position = r.origin;
-        hit.geometric_normal = normalize(r.origin - center);
-        hit.shading_normal = normalize(r.origin - center);
-        hit.material = &material;
-        return true;
-    }
-
-    // Check if the distance to the intersection point is within the ray's tmin and tmax
-    if (t_1 >= r.tmin && t_1 <= r.tmax){
-        hit.has_hit = true;
-        hit.dist = t_1;
-        hit.position = r.origin + (t_1 * r.direction);
-        hit.geometric_normal = normalize(hit.position - center);
-        hit.shading_normal = normalize(hit.position - center);
-        hit.material = &material;
-        return true;
-    }
-    else if (t_2 >= r.tmin && t_2 <= r.tmax){
-        hit.has_hit = true;
-        hit.dist = t_2;
-        hit.position = r.origin + (t_2 * r.direction);
-        hit.geometric_normal = normalize(hit.position - center);
-        hit.shading_normal = normalize(hit.position - center);
-        hit.material = &material;
-        return true;
-    }
-    else{
-        return false;
-    }
-
-    // Check the distant between the ray origin and the sphere center
-    float3 distance = r.origin - center;
-
-    // Calculate the discriminant
-    float discriminant = dot(distance, r.direction) * dot(distance, r.direction) - dot(distance, distance) + radius * radius;
-
-    // Check if the discriminant is negative
     if (discriminant < 0.0f){
         return false;
     }
 
-    // Calculate the distance to the intersection point
-    float distanceToIntersection = -dot(distance, r.direction) - sqrt(discriminant);
+    // Calculate distance to the intersection point(s)
+    float t_1 = -b_2 + sqrt((b_2 * b_2) - c);
+    float t_2 = -b_2 - sqrt((b_2 * b_2) - c);
 
-    // Check if the distance is negative
-    if (distanceToIntersection < 0.0f){
-        return false;
+    // There is no need to handle the case where the discriminant is zero separately but here is the code anyway
+    if (discriminant == 0.0f){
+        // If the discriminant is zero the ray grazes the sphere
+        // One intersection point
+    } else if(discriminant > 0.0f){
+        // If the discriminant is greater than zero the ray intersects the sphere at two points
+        // Two intersection points: The entry point and the exit point
     }
 
-    // Calculate the intersection point
-    float3 intersectionPoint = r.origin + distanceToIntersection * r.direction;
-
-    // Calculate the normal
-    float3 normal = normalize(intersectionPoint - center);
-
-    // Check if the distance is within the ray tmin and tmax
-    if (distanceToIntersection < r.tmin || distanceToIntersection > r.tmax){
-        return false;
+    // The closest intersection is the smallest of the two solutions (t_1 and t_2)
+    // If it is withing the interval [tmin, tmax]
+    if (t_1 <= r.tmax && t_1 >= r.tmin){
+        // Set the hit information
+        hit.has_hit = true;
+        hit.dist = t_1;
+        hit.position = r.origin + t_1 * r.direction;
+        hit.geometric_normal = normalize(hit.position - center);
+        hit.shading_normal = normalize(hit.position - center);
+        hit.material = &material;
+        return true;
+    } else if (t_2 <= r.tmax && t_2 >= r.tmin){
+        // Set the hit information
+        hit.has_hit = true;
+        hit.dist = t_2;
+        hit.position = r.origin + t_2 * r.direction;
+        hit.geometric_normal = normalize(hit.position - center);
+        hit.shading_normal = normalize(hit.position - center);
+        hit.material = &material;
+        return true;
     }
 
-    // Set the hit information
-    hit.has_hit = true;
-    hit.dist = distanceToIntersection;
-    hit.position = intersectionPoint;
-    hit.geometric_normal = normal;
-    hit.shading_normal = normal;
-    hit.material = &material;
-
-    return true;
+    // If the intersection is not within the interval [tmin, tmax] return false
+    return false;
 }
 
 void Sphere::transform(const Matrix4x4& m)
