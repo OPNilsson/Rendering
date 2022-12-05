@@ -7,19 +7,20 @@
 
 #include "ToneMap.h"
 
-class Gamma : public ToneMap
-{
+class Gamma : public ToneMap {
 public:
-  Gamma(double gamma) : exponent(1.0/gamma) { }
+    Gamma(double gamma) : exponent(1.0 / gamma) {}
 
-  virtual void apply(float* data, unsigned int width, unsigned int height, unsigned int channels) const;
-  virtual void unapply(float* data, unsigned int width, unsigned int height, unsigned int channels) const;
+    virtual void apply(float *data, unsigned int width, unsigned int height, unsigned int channels) const;
+
+    virtual void unapply(float *data, unsigned int width, unsigned int height, unsigned int channels) const;
 
 protected:
-  double gamma_correct(double value) const;
-  double gamma_uncorrect(double value) const;
+    double gamma_correct(double value) const;
 
-  double exponent;
+    double gamma_uncorrect(double value) const;
+
+    double exponent;
 };
 
 #endif // GAMMA_H

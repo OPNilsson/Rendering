@@ -10,15 +10,14 @@
 #include "RayTracer.h"
 #include "Transparent.h"
 
-class Volume : public Transparent
-{
+class Volume : public Transparent {
 public:
-  Volume(RayTracer* raytracer, unsigned int max_trace_depth = 20) : Transparent(raytracer, max_trace_depth) { }
+    Volume(RayTracer *raytracer, unsigned int max_trace_depth = 20) : Transparent(raytracer, max_trace_depth) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 
 protected:
-  optix::float3 get_transmittance(const HitInfo& hit) const;
+    optix::float3 get_transmittance(const HitInfo &hit) const;
 };
 
 #endif // VOLUME_H

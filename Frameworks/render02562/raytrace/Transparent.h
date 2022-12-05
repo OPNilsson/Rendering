@@ -10,14 +10,12 @@
 #include "RayTracer.h"
 #include "Mirror.h"
 
-class Transparent : public Mirror
-{
+class Transparent : public Mirror {
 public:
-  Transparent(RayTracer* raytracer, unsigned int max_trace_depth = 10) 
-    : Mirror(raytracer, max_trace_depth)
-  { }
+    Transparent(RayTracer *raytracer, unsigned int max_trace_depth = 10)
+            : Mirror(raytracer, max_trace_depth) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 };
 
 #endif // TRANSPARENT_H

@@ -43,9 +43,7 @@ namespace optix {
 #endif /* #if defined (__cplusplus) */
 
 
-
 #include <vector_types.h>
-
 
 
 #if defined(__cplusplus)

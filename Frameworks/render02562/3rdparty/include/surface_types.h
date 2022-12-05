@@ -81,18 +81,16 @@
 /**
  * CUDA Surface boundary modes
  */
-enum __device_builtin__ cudaSurfaceBoundaryMode
-{
-    cudaBoundaryModeZero  = 0,    /**< Zero boundary mode */
+enum __device_builtin__ cudaSurfaceBoundaryMode {
+    cudaBoundaryModeZero = 0,    /**< Zero boundary mode */
     cudaBoundaryModeClamp = 1,    /**< Clamp boundary mode */
-    cudaBoundaryModeTrap  = 2     /**< Trap boundary mode */
+    cudaBoundaryModeTrap = 2     /**< Trap boundary mode */
 };
 
 /**
  * CUDA Surface format modes
  */
-enum __device_builtin__  cudaSurfaceFormatMode
-{
+enum __device_builtin__  cudaSurfaceFormatMode {
     cudaFormatModeForced = 0,     /**< Forced format mode */
     cudaFormatModeAuto = 1        /**< Auto format mode */
 };
@@ -100,8 +98,7 @@ enum __device_builtin__  cudaSurfaceFormatMode
 /**
  * CUDA Surface reference
  */
-struct __device_builtin__ surfaceReference
-{
+struct __device_builtin__ surfaceReference {
     /**
      * Channel descriptor for surface reference
      */

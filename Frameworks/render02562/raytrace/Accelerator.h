@@ -12,20 +12,23 @@
 #include "Plane.h"
 #include "HitInfo.h"
 
-class Accelerator
-{
+class Accelerator {
 public:
-  virtual ~Accelerator();
-  virtual void init(const std::vector<Object3D*>& geometry, const std::vector<const Plane*>& scene_planes);
-  virtual bool closest_hit(optix::Ray& r, HitInfo& hit) const;
-  virtual bool any_hit(optix::Ray& r, HitInfo& hit) const;
+    virtual ~Accelerator();
+
+    virtual void init(const std::vector<Object3D *> &geometry, const std::vector<const Plane *> &scene_planes);
+
+    virtual bool closest_hit(optix::Ray &r, HitInfo &hit) const;
+
+    virtual bool any_hit(optix::Ray &r, HitInfo &hit) const;
 
 protected:
-  void closest_plane(optix::Ray& r, HitInfo& hit) const;
-  bool any_plane(optix::Ray& r, HitInfo& hit) const;
+    void closest_plane(optix::Ray &r, HitInfo &hit) const;
 
-  std::vector<AccObj*> primitives;
-  std::vector<const Plane*> planes;
+    bool any_plane(optix::Ray &r, HitInfo &hit) const;
+
+    std::vector<AccObj *> primitives;
+    std::vector<const Plane *> planes;
 };
 
 #endif // ACCELERATOR_H

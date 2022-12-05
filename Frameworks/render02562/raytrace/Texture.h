@@ -10,68 +10,85 @@
 #include "my_glut.h"
 #include "../SOIL/SOIL.h"
 
-class Texture
-{
+class Texture {
 public:
-  Texture() : width(0), height(0), data(0), fdata(0), tex_handle(0), tex_target(GL_TEXTURE_2D), clamp(false), channels(0), filename("") { }
-  ~Texture() { SOIL_free_image_data(data); data = 0; delete [] fdata; fdata = 0; }
+    Texture() : width(0), height(0), data(0), fdata(0), tex_handle(0), tex_target(GL_TEXTURE_2D), clamp(false),
+                channels(0), filename("") {}
 
-  // Load texture from file
-  void load(const char* file_name);
+    ~Texture() {
+        SOIL_free_image_data(data);
+        data = 0;
+        delete[] fdata;
+        fdata = 0;
+    }
 
-  // Load texture from OpenGL texture
-  void load(GLenum target, GLuint texture);
+    // Load texture from file
+    void load(const char *file_name);
 
-  // Clear texture data
-  void clear() { SOIL_free_image_data(data); data = 0; delete [] fdata; fdata = 0; }
+    // Load texture from OpenGL texture
+    void load(GLenum target, GLuint texture);
 
-  // Was a texture loaded yet
-  bool has_texture() const { return fdata != 0; }
+    // Clear texture data
+    void clear() {
+        SOIL_free_image_data(data);
+        data = 0;
+        delete[] fdata;
+        fdata = 0;
+    }
 
-  // Look up the texel using texture space coordinates
-  virtual optix::float4 sample_nearest(const optix::float3& texcoord) const;
-  virtual optix::float4 sample_linear(const optix::float3& texcoord) const;
+    // Was a texture loaded yet
+    bool has_texture() const { return fdata != 0; }
 
-  // Clamp the texture
-  void clamp_to_edge() { clamp = true; }
+    // Look up the texel using texture space coordinates
+    virtual optix::float4 sample_nearest(const optix::float3 &texcoord) const;
 
-  // Repeat the texture
-  void repeat() { clamp = false; }
+    virtual optix::float4 sample_linear(const optix::float3 &texcoord) const;
 
-  // Accessors
-  unsigned int get_width() const { return width; }
-  unsigned int get_height() const { return height; }
-  std::string get_filename() const { return filename; }
+    // Clamp the texture
+    void clamp_to_edge() { clamp = true; }
 
-  // OpenGL
-  void bind() const { glBindTexture(tex_target, tex_handle); }
-  void enable() const { glEnable(tex_target); }
-  void disable() const { glDisable(tex_target); }
+    // Repeat the texture
+    void repeat() { clamp = false; }
+
+    // Accessors
+    unsigned int get_width() const { return width; }
+
+    unsigned int get_height() const { return height; }
+
+    std::string get_filename() const { return filename; }
+
+    // OpenGL
+    void bind() const { glBindTexture(tex_target, tex_handle); }
+
+    void enable() const { glEnable(tex_target); }
+
+    void disable() const { glDisable(tex_target); }
 
 protected:
-  optix::float4 look_up(unsigned int idx) const;
-  float convert(unsigned char c) const;
+    optix::float4 look_up(unsigned int idx) const;
 
-  // Texture dimensions
-  int width;
-  int height;
+    float convert(unsigned char c) const;
 
-  // Pointers to image data
-  unsigned char* data;
-  optix::float4* fdata;
+    // Texture dimensions
+    int width;
+    int height;
 
-  // OpenGL texture info
-  GLuint tex_handle;
-  GLenum tex_target;
+    // Pointers to image data
+    unsigned char *data;
+    optix::float4 *fdata;
 
-  // If clamp is false the texture is repeated
-  bool clamp;
+    // OpenGL texture info
+    GLuint tex_handle;
+    GLenum tex_target;
 
-  // Bytes per pixel
-  int channels;
+    // If clamp is false the texture is repeated
+    bool clamp;
 
-  // Texture filename
-  std::string filename;
+    // Bytes per pixel
+    int channels;
+
+    // Texture filename
+    std::string filename;
 };
 
 #endif // TEXTURE_H

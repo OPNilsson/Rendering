@@ -12,14 +12,12 @@
 #include "Light.h"
 #include "Glossy.h"
 
-class MCGlossy : public Glossy
-{
+class MCGlossy : public Glossy {
 public:
-  MCGlossy(PathTracer* pathtracer, const std::vector<Light*>& light_vector, int max_trace_depth = 500) 
-    : Glossy(pathtracer, light_vector, max_trace_depth) 
-  { }
+    MCGlossy(PathTracer *pathtracer, const std::vector<Light *> &light_vector, int max_trace_depth = 500)
+            : Glossy(pathtracer, light_vector, max_trace_depth) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 };
 
 #endif // MCGLOSSY_H

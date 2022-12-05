@@ -45,7 +45,7 @@
 #include "Randomizer.h"
 
 #ifdef _OPENMP
-  #include <omp.h>
+#include <omp.h>
 #endif
 
 Randomizer randomizer;
@@ -53,58 +53,52 @@ Randomizer randomizer;
 const int Randomizer::N = 624;
 const int Randomizer::M = 397;
 
-void Randomizer::init(unsigned long seed)
-{
-  mt.resize(N);
-  mt[0] = seed & 0xffffffffUL;
-  for(mti = 1; mti < N; mti++) 
-  {
-    mt[mti] = (1812433253UL * (mt[mti-1] ^ (mt[mti-1] >> 30)) + mti); 
-    /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
-    /* In the previous versions, MSBs of the seed affect   */
-    /* only MSBs of the array mt[].                        */
-    /* 2002/01/09 modified by Makoto Matsumoto             */
-    mt[mti] &= 0xffffffffUL;
-    /* for >32 bit machines */
-  }  
+void Randomizer::init(unsigned long seed) {
+    mt.resize(N);
+    mt[0] = seed & 0xffffffffUL;
+    for (mti = 1; mti < N; mti++) {
+        mt[mti] = (1812433253UL * (mt[mti - 1] ^ (mt[mti - 1] >> 30)) + mti);
+        /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
+        /* In the previous versions, MSBs of the seed affect   */
+        /* only MSBs of the array mt[].                        */
+        /* 2002/01/09 modified by Makoto Matsumoto             */
+        mt[mti] &= 0xffffffffUL;
+        /* for >32 bit machines */
+    }
 }
 
-Randomizer::Randomizer(unsigned long seed)
-{
+Randomizer::Randomizer(unsigned long seed) {
 #ifdef _OPENMP
-  init(seed + omp_get_thread_num());
+    init(seed + omp_get_thread_num());
 #else
-  init(seed);
+    init(seed);
 #endif
 }
 
-unsigned long Randomizer::mt_random_int32()
-{
+unsigned long Randomizer::mt_random_int32() {
     unsigned long y;
     static const unsigned long UPPER_MASK = 0x80000000UL; /* most significant w-r bits */
     static const unsigned long LOWER_MASK = 0x7fffffffUL; /* least significant r bits */
     static const unsigned long mag01[2] = {0x0UL, 0x9908b0dfUL};
     /* mag01[x] = x * MATRIX_A  for x=0,1 */
 
-    if(mti >= N) /* generate N words at one time */
+    if (mti >= N) /* generate N words at one time */
     {
-      int kk;
-      for(kk = 0; kk < N - M; ++kk) 
-      {
-        y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
-        mt[kk] = mt[kk + M] ^ (y >> 1) ^ mag01[y & 0x1UL];
-      }
-      for(; kk < N - 1; ++kk) 
-      {
-          y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
-          mt[kk] = mt[kk + (M - N)] ^ (y >> 1) ^ mag01[y & 0x1UL];
-      }
-      y = (mt[N-1]&UPPER_MASK)|(mt[0]&LOWER_MASK);
-      mt[N - 1] = mt[M - 1] ^ (y >> 1) ^ mag01[y & 0x1UL];
+        int kk;
+        for (kk = 0; kk < N - M; ++kk) {
+            y = (mt[kk] & UPPER_MASK) | (mt[kk + 1] & LOWER_MASK);
+            mt[kk] = mt[kk + M] ^ (y >> 1) ^ mag01[y & 0x1UL];
+        }
+        for (; kk < N - 1; ++kk) {
+            y = (mt[kk] & UPPER_MASK) | (mt[kk + 1] & LOWER_MASK);
+            mt[kk] = mt[kk + (M - N)] ^ (y >> 1) ^ mag01[y & 0x1UL];
+        }
+        y = (mt[N - 1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+        mt[N - 1] = mt[M - 1] ^ (y >> 1) ^ mag01[y & 0x1UL];
 
-      mti = 0;
+        mti = 0;
     }
-  
+
     y = mt[mti++];
 
     /* Tempering */
@@ -116,20 +110,17 @@ unsigned long Randomizer::mt_random_int32()
     return y;
 }
 
-double Randomizer::mt_random()
-{
-    return mt_random_int32()/4294967295.0; 
-    /* divided by 2^32-1 */ 
+double Randomizer::mt_random() {
+    return mt_random_int32() / 4294967295.0;
+    /* divided by 2^32-1 */
 }
 
-double Randomizer::mt_random_half_open()
-{
-    return mt_random_int32()/4294967296.0; 
+double Randomizer::mt_random_half_open() {
+    return mt_random_int32() / 4294967296.0;
     /* divided by 2^32 */
 }
 
-double Randomizer::mt_random_open(void)
-{
-    return (mt_random_int32() + 0.5)/4294967296.0; 
+double Randomizer::mt_random_open(void) {
+    return (mt_random_int32() + 0.5) / 4294967296.0;
     /* divided by 2^32 */
 }

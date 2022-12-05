@@ -15,43 +15,48 @@
 #include "HitInfo.h"
 #include "Accelerator.h"
 
-enum BspNodeType { bsp_x_axis, bsp_y_axis, bsp_z_axis, bsp_leaf };
-
-struct BspNode 
-{
-  BspNode() : left(0), right(0) { }
-
-  BspNodeType axis_leaf; // 00 = axis 0, 01 = axis 1, 10 = axis 2, 11 = leaf
-  float plane;
-  BspNode *left, *right;
-  unsigned int id;
-  unsigned int count;
-  unsigned int ref;
+enum BspNodeType {
+    bsp_x_axis, bsp_y_axis, bsp_z_axis, bsp_leaf
 };
 
-class BspTree : public Accelerator
-{
-public:
-  BspTree(unsigned int max_objects_in_leaf = 4, unsigned int max_levels_in_tree = 20) 
-    : root(0), max_objects(max_objects_in_leaf), max_level(max_levels_in_tree) 
-  { }
+struct BspNode {
+    BspNode() : left(0), right(0) {}
 
-  virtual ~BspTree();
-  virtual void init(const std::vector<Object3D*>& geometry, const std::vector<const Plane*>& planes);
-  virtual bool closest_hit(optix::Ray& r, HitInfo& hit) const;
-  virtual bool any_hit(optix::Ray& r, HitInfo& hit) const;
+    BspNodeType axis_leaf; // 00 = axis 0, 01 = axis 1, 10 = axis 2, 11 = leaf
+    float plane;
+    BspNode *left, *right;
+    unsigned int id;
+    unsigned int count;
+    unsigned int ref;
+};
+
+class BspTree : public Accelerator {
+public:
+    BspTree(unsigned int max_objects_in_leaf = 4, unsigned int max_levels_in_tree = 20)
+            : root(0), max_objects(max_objects_in_leaf), max_level(max_levels_in_tree) {}
+
+    virtual ~BspTree();
+
+    virtual void init(const std::vector<Object3D *> &geometry, const std::vector<const Plane *> &planes);
+
+    virtual bool closest_hit(optix::Ray &r, HitInfo &hit) const;
+
+    virtual bool any_hit(optix::Ray &r, HitInfo &hit) const;
 
 private:
-  bool intersect_min_max(optix::Ray& ray) const;
-  void subdivide_node(BspNode& node, optix::Aabb& bbox, unsigned int level, std::vector<AccObj*>& objects);
-  bool intersect_node(optix::Ray& ray, HitInfo& hit, const BspNode& node) const;
-  void delete_node(BspNode *node);
+    bool intersect_min_max(optix::Ray &ray) const;
 
-  std::vector<AccObj*> tree_objects;
-  BspNode* root;
-  optix::Aabb bbox;
-  unsigned int max_objects;
-  unsigned int max_level;
+    void subdivide_node(BspNode &node, optix::Aabb &bbox, unsigned int level, std::vector<AccObj *> &objects);
+
+    bool intersect_node(optix::Ray &ray, HitInfo &hit, const BspNode &node) const;
+
+    void delete_node(BspNode *node);
+
+    std::vector<AccObj *> tree_objects;
+    BspNode *root;
+    optix::Aabb bbox;
+    unsigned int max_objects;
+    unsigned int max_level;
 };
 
 #endif // BSPTREE_H

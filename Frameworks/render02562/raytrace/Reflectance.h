@@ -10,20 +10,17 @@
 #include "HitInfo.h"
 #include "Emission.h"
 
-class Reflectance : public Emission
-{
+class Reflectance : public Emission {
 public:
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const 
-  { 
-    return get_diffuse(hit) + Emission::shade(r, hit, emit); 
-  }
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const {
+        return get_diffuse(hit) + Emission::shade(r, hit, emit);
+    }
 
 protected:
-  virtual optix::float3 get_diffuse(const HitInfo& hit) const
-  {
-    const ObjMaterial* m = hit.material;
-    return m ? optix::make_float3(m->diffuse[0], m->diffuse[1], m->diffuse[2]) : optix::make_float3(0.8f);
-  }
+    virtual optix::float3 get_diffuse(const HitInfo &hit) const {
+        const ObjMaterial *m = hit.material;
+        return m ? optix::make_float3(m->diffuse[0], m->diffuse[1], m->diffuse[2]) : optix::make_float3(0.8f);
+    }
 };
 
 #endif // REFLECTANCE_H

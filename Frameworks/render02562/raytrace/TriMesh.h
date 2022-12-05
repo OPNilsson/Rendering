@@ -23,73 +23,71 @@
 
 		A number of functions are defined allowing for rendering of the triangle
 		mesh. */
-class TriMesh : public Object3D
-{
-	public:
-	
-	// ------- DATA -------
+class TriMesh : public Object3D {
+public:
 
-	/// Name of model
-	std::string name;
-	
-	/// Indexed face set for the actual geometry
-	IndexedFaceSet geometry;
+    // ------- DATA -------
 
-	/// Indexed face set for the normals
-	IndexedFaceSet normals;
+    /// Name of model
+    std::string name;
 
-	/// Indexed face set for the texture coordinates.
-	IndexedFaceSet texcoords;
+    /// Indexed face set for the actual geometry
+    IndexedFaceSet geometry;
 
-	/// Material indices for all faces
-	std::vector<int> mat_idx;
+    /// Indexed face set for the normals
+    IndexedFaceSet normals;
 
-	/// Texture indices for all faces
-	std::vector<int> tex_idx;
+    /// Indexed face set for the texture coordinates.
+    IndexedFaceSet texcoords;
 
-	/// Vector of materials
-	std::vector<ObjMaterial> materials;
+    /// Material indices for all faces
+    std::vector<int> mat_idx;
 
-  /// Vector of triangle face areas
-  std::vector<float> face_areas;
+    /// Texture indices for all faces
+    std::vector<int> tex_idx;
 
-  /// Tabulated cumulative distribution function for sampling triangles according to area
-  std::vector<float> face_area_cdf;
+    /// Vector of materials
+    std::vector<ObjMaterial> materials;
 
-  /// Total surface area of the triangle mesh
-  float surface_area;
+    /// Vector of triangle face areas
+    std::vector<float> face_areas;
 
-	// -------- FUNCTIONS -----------
+    /// Tabulated cumulative distribution function for sampling triangles according to area
+    std::vector<float> face_area_cdf;
 
-  /// Compute intersection of ray with a triangle in the mesh
-  virtual bool intersect(const optix::Ray& r, HitInfo& hit, unsigned int prim_idx) const;
+    /// Total surface area of the triangle mesh
+    float surface_area;
 
-  /// Apply a transformation matrix to the mesh
-  virtual void transform(const optix::Matrix4x4& m);
+    // -------- FUNCTIONS -----------
 
-  /// Get an axis aligned bounding box for the model.
-  virtual optix::Aabb compute_bbox() const;
+    /// Compute intersection of ray with a triangle in the mesh
+    virtual bool intersect(const optix::Ray &r, HitInfo &hit, unsigned int prim_idx) const;
 
-  /// Get number of triangles in mesh
-  virtual unsigned int get_no_of_primitives() const { return geometry.no_faces(); }
+    /// Apply a transformation matrix to the mesh
+    virtual void transform(const optix::Matrix4x4 &m);
 
-  /// Get the bounding box of a triangle in the mesh
-  virtual optix::Aabb get_primitive_bbox(unsigned int prim_idx) const;
+    /// Get an axis aligned bounding box for the model.
+    virtual optix::Aabb compute_bbox() const;
 
-	/// Returns true if at least one normal has been defined.
-	bool has_normals() const 
-	{
-		return normals.no_faces()>0;
-	}
-	
-	/// Find a material from its name
-	unsigned int find_material(const std::string&) const;
+    /// Get number of triangles in mesh
+    virtual unsigned int get_no_of_primitives() const { return geometry.no_faces(); }
 
-	/// Compute normals for the mesh. Does not check if there are normals.
-	void compute_normals();
+    /// Get the bounding box of a triangle in the mesh
+    virtual optix::Aabb get_primitive_bbox(unsigned int prim_idx) const;
 
-  /// Compute areas for all faces and total surface area.
-  void compute_areas();
+    /// Returns true if at least one normal has been defined.
+    bool has_normals() const {
+        return normals.no_faces() > 0;
+    }
+
+    /// Find a material from its name
+    unsigned int find_material(const std::string &) const;
+
+    /// Compute normals for the mesh. Does not check if there are normals.
+    void compute_normals();
+
+    /// Compute areas for all faces and total surface area.
+    void compute_areas();
 };
 
 #endif // TRIMESH_H

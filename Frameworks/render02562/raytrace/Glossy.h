@@ -13,14 +13,12 @@
 #include "Transparent.h"
 #include "Phong.h"
 
-class Glossy : public Transparent, public Phong
-{
+class Glossy : public Transparent, public Phong {
 public:
-  Glossy(RayTracer* raytracer, const std::vector<Light*>& light_vector, int max_trace_depth = 10) 
-    : Transparent(raytracer, max_trace_depth), Phong(light_vector) 
-  { }
+    Glossy(RayTracer *raytracer, const std::vector<Light *> &light_vector, int max_trace_depth = 10)
+            : Transparent(raytracer, max_trace_depth), Phong(light_vector) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 };
 
 #endif // GLOSSY_H

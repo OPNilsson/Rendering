@@ -108,19 +108,20 @@
 //     stbi_is_hdr(char *filename);
 
 #ifndef STBI_NO_STDIO
+
 #include <stdio.h>
+
 #endif
 
 #define STBI_VERSION 1
 
-enum
-{
-   STBI_default = 0, // only used for req_comp
+enum {
+    STBI_default = 0, // only used for req_comp
 
-   STBI_grey       = 1,
-   STBI_grey_alpha = 2,
-   STBI_rgb        = 3,
-   STBI_rgb_alpha  = 4
+    STBI_grey = 1,
+    STBI_grey_alpha = 2,
+    STBI_rgb = 3,
+    STBI_rgb_alpha = 4
 };
 
 typedef unsigned char stbi_uc;
@@ -135,43 +136,57 @@ extern "C" {
 extern stbi_uc *stbi_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
 
 #ifndef STBI_NO_STDIO
-extern stbi_uc *stbi_load            (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_load_from_file  (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
 // for stbi_load_from_file, file pointer is left pointing immediately after image
 #endif
 
 #ifndef STBI_NO_HDR
-   extern float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
 
-   #ifndef STBI_NO_STDIO
-   extern float *stbi_loadf            (char const *filename,   int *x, int *y, int *comp, int req_comp);
-   extern float *stbi_loadf_from_file  (FILE *f,                int *x, int *y, int *comp, int req_comp);
-   #endif
+extern float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
 
-   extern void   stbi_hdr_to_ldr_gamma(float gamma);
-   extern void   stbi_hdr_to_ldr_scale(float scale);
+#ifndef STBI_NO_STDIO
 
-   extern void   stbi_ldr_to_hdr_gamma(float gamma);
-   extern void   stbi_ldr_to_hdr_scale(float scale);
+extern float *stbi_loadf(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern float *stbi_loadf_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+#endif
+
+extern void stbi_hdr_to_ldr_gamma(float gamma);
+
+extern void stbi_hdr_to_ldr_scale(float scale);
+
+extern void stbi_ldr_to_hdr_gamma(float gamma);
+
+extern void stbi_ldr_to_hdr_scale(float scale);
+
 #endif // STBI_NO_HDR
 
 // get a VERY brief reason for failure
 // NOT THREADSAFE
-extern const char *stbi_failure_reason  (void); 
+extern const char *stbi_failure_reason(void);
 
 // free the loaded image -- this is just free()
-extern void     stbi_image_free      (void *retval_from_stbi_load);
+extern void stbi_image_free(void *retval_from_stbi_load);
 
 // get image dimensions & components without fully decoding
-extern int      stbi_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
-extern int      stbi_is_hdr_from_memory(stbi_uc const *buffer, int len);
+extern int stbi_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
+
+extern int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len);
 
 #ifndef STBI_NO_STDIO
-extern int      stbi_info            (char const *filename,     int *x, int *y, int *comp);
-extern int      stbi_info_from_file  (FILE *f,                  int *x, int *y, int *comp);
 
-extern int      stbi_is_hdr          (char const *filename);
-extern int      stbi_is_hdr_from_file(FILE *f);
+extern int stbi_info(char const *filename, int *x, int *y, int *comp);
+
+extern int stbi_info_from_file(FILE *f, int *x, int *y, int *comp);
+
+extern int stbi_is_hdr(char const *filename);
+
+extern int stbi_is_hdr_from_file(FILE *f);
+
 #endif
 
 // for image formats that explicitly notate that they have premultiplied alpha,
@@ -187,21 +202,28 @@ extern void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert);
 // ZLIB client - used by PNG, available for other purposes
 
 extern char *stbi_zlib_decode_malloc_guesssize(const char *buffer, int len, int initial_size, int *outlen);
+
 extern char *stbi_zlib_decode_malloc(const char *buffer, int len, int *outlen);
-extern int   stbi_zlib_decode_buffer(char *obuffer, int olen, const char *ibuffer, int ilen);
+
+extern int stbi_zlib_decode_buffer(char *obuffer, int olen, const char *ibuffer, int ilen);
 
 extern char *stbi_zlib_decode_noheader_malloc(const char *buffer, int len, int *outlen);
-extern int   stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen);
+
+extern int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen);
 
 // define new loaders
-typedef struct
-{
-   int       (*test_memory)(stbi_uc const *buffer, int len);
-   stbi_uc * (*load_from_memory)(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
-   #ifndef STBI_NO_STDIO
-   int       (*test_file)(FILE *f);
-   stbi_uc * (*load_from_file)(FILE *f, int *x, int *y, int *comp, int req_comp);
-   #endif
+typedef struct {
+    int (*test_memory)(stbi_uc const *buffer, int len);
+
+    stbi_uc *(*load_from_memory)(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
+#ifndef STBI_NO_STDIO
+
+    int (*test_file)(FILE *f);
+
+    stbi_uc *(*load_from_file)(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+#endif
 } stbi_loader;
 
 // register a loader by filling out the above structure (you must define ALL functions)
@@ -234,96 +256,145 @@ extern void stbi_install_YCbCr_to_RGB(stbi_YCbCr_to_RGB_run func);
 // TYPE-SPECIFIC ACCESS
 
 // is it a jpeg?
-extern int      stbi_jpeg_test_memory     (stbi_uc const *buffer, int len);
+extern int stbi_jpeg_test_memory(stbi_uc const *buffer, int len);
+
 extern stbi_uc *stbi_jpeg_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
-extern int      stbi_jpeg_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
+
+extern int stbi_jpeg_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
 
 #ifndef STBI_NO_STDIO
-extern stbi_uc *stbi_jpeg_load            (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern int      stbi_jpeg_test_file       (FILE *f);
-extern stbi_uc *stbi_jpeg_load_from_file  (FILE *f,                  int *x, int *y, int *comp, int req_comp);
 
-extern int      stbi_jpeg_info            (char const *filename,     int *x, int *y, int *comp);
-extern int      stbi_jpeg_info_from_file  (FILE *f,                  int *x, int *y, int *comp);
+extern stbi_uc *stbi_jpeg_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_jpeg_test_file(FILE *f);
+
+extern stbi_uc *stbi_jpeg_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_jpeg_info(char const *filename, int *x, int *y, int *comp);
+
+extern int stbi_jpeg_info_from_file(FILE *f, int *x, int *y, int *comp);
+
 #endif
 
 // is it a png?
-extern int      stbi_png_test_memory      (stbi_uc const *buffer, int len);
-extern stbi_uc *stbi_png_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
-extern int      stbi_png_info_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp);
+extern int stbi_png_test_memory(stbi_uc const *buffer, int len);
+
+extern stbi_uc *stbi_png_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_png_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
 
 #ifndef STBI_NO_STDIO
-extern stbi_uc *stbi_png_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern int      stbi_png_info             (char const *filename,     int *x, int *y, int *comp);
-extern int      stbi_png_test_file        (FILE *f);
-extern stbi_uc *stbi_png_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
-extern int      stbi_png_info_from_file   (FILE *f,                  int *x, int *y, int *comp);
+
+extern stbi_uc *stbi_png_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_png_info(char const *filename, int *x, int *y, int *comp);
+
+extern int stbi_png_test_file(FILE *f);
+
+extern stbi_uc *stbi_png_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_png_info_from_file(FILE *f, int *x, int *y, int *comp);
+
 #endif
 
 // is it a bmp?
-extern int      stbi_bmp_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_bmp_test_memory(stbi_uc const *buffer, int len);
 
-extern stbi_uc *stbi_bmp_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_bmp_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+extern stbi_uc *stbi_bmp_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_bmp_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
 #ifndef STBI_NO_STDIO
-extern int      stbi_bmp_test_file        (FILE *f);
-extern stbi_uc *stbi_bmp_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_bmp_test_file(FILE *f);
+
+extern stbi_uc *stbi_bmp_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
 #endif
 
 // is it a tga?
-extern int      stbi_tga_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_tga_test_memory(stbi_uc const *buffer, int len);
 
-extern stbi_uc *stbi_tga_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_tga_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+extern stbi_uc *stbi_tga_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_tga_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
 #ifndef STBI_NO_STDIO
-extern int      stbi_tga_test_file        (FILE *f);
-extern stbi_uc *stbi_tga_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_tga_test_file(FILE *f);
+
+extern stbi_uc *stbi_tga_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
 #endif
 
 // is it a psd?
-extern int      stbi_psd_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_psd_test_memory(stbi_uc const *buffer, int len);
 
-extern stbi_uc *stbi_psd_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_psd_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+extern stbi_uc *stbi_psd_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_psd_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
 #ifndef STBI_NO_STDIO
-extern int      stbi_psd_test_file        (FILE *f);
-extern stbi_uc *stbi_psd_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_psd_test_file(FILE *f);
+
+extern stbi_uc *stbi_psd_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
 #endif
 
 // is it an hdr?
-extern int      stbi_hdr_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_hdr_test_memory(stbi_uc const *buffer, int len);
 
-extern float *  stbi_hdr_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern float *  stbi_hdr_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_hdr_load_rgbe        (char const *filename,           int *x, int *y, int *comp, int req_comp);
+extern float *stbi_hdr_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern float *stbi_hdr_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_hdr_load_rgbe(char const *filename, int *x, int *y, int *comp, int req_comp);
+
 #ifndef STBI_NO_STDIO
-extern int      stbi_hdr_test_file        (FILE *f);
-extern float *  stbi_hdr_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_hdr_load_rgbe_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_hdr_test_file(FILE *f);
+
+extern float *stbi_hdr_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_hdr_load_rgbe_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
 #endif
 
 // is it a pic?
-extern int      stbi_pic_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_pic_test_memory(stbi_uc const *buffer, int len);
 
-extern stbi_uc *stbi_pic_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_pic_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+extern stbi_uc *stbi_pic_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_pic_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
 #ifndef STBI_NO_STDIO
-extern int      stbi_pic_test_file        (FILE *f);
-extern stbi_uc *stbi_pic_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_pic_test_file(FILE *f);
+
+extern stbi_uc *stbi_pic_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
 #endif
 
 // is it a gif?
-extern int      stbi_gif_test_memory      (stbi_uc const *buffer, int len);
+extern int stbi_gif_test_memory(stbi_uc const *buffer, int len);
 
-extern stbi_uc *stbi_gif_load             (char const *filename,     int *x, int *y, int *comp, int req_comp);
-extern stbi_uc *stbi_gif_load_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
-extern int      stbi_gif_info_from_memory (stbi_uc const *buffer, int len, int *x, int *y, int *comp);
+extern stbi_uc *stbi_gif_load(char const *filename, int *x, int *y, int *comp, int req_comp);
+
+extern stbi_uc *stbi_gif_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_gif_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp);
 
 #ifndef STBI_NO_STDIO
-extern int      stbi_gif_test_file        (FILE *f);
-extern stbi_uc *stbi_gif_load_from_file   (FILE *f,                  int *x, int *y, int *comp, int req_comp);
-extern int      stbi_gif_info             (char const *filename,     int *x, int *y, int *comp);
-extern int      stbi_gif_info_from_file   (FILE *f,                  int *x, int *y, int *comp);
+
+extern int stbi_gif_test_file(FILE *f);
+
+extern stbi_uc *stbi_gif_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp);
+
+extern int stbi_gif_info(char const *filename, int *x, int *y, int *comp);
+
+extern int stbi_gif_info_from_file(FILE *f, int *x, int *y, int *comp);
+
 #endif
 
 

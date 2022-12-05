@@ -20,13 +20,13 @@ extern "C" {
 	or to make it a power-of-two sized.
 **/
 int
-	up_scale_image
-	(
-		const unsigned char* const orig,
-		int width, int height, int channels,
-		unsigned char* resampled,
-		int resampled_width, int resampled_height
-	);
+up_scale_image
+        (
+                const unsigned char *const orig,
+                int width, int height, int channels,
+                unsigned char *resampled,
+                int resampled_width, int resampled_height
+        );
 
 /**
 	This function downscales an image.
@@ -35,13 +35,13 @@ int
 	power-of-two sized.
 **/
 int
-	mipmap_image
-	(
-		const unsigned char* const orig,
-		int width, int height, int channels,
-		unsigned char* resampled,
-		int block_size_x, int block_size_y
-	);
+mipmap_image
+        (
+                const unsigned char *const orig,
+                int width, int height, int channels,
+                unsigned char *resampled,
+                int block_size_x, int block_size_y
+        );
 
 /**
 	This function takes the RGB components of the image
@@ -51,11 +51,11 @@ int
 	loading images like normal- or height-maps!
 **/
 int
-	scale_image_RGB_to_NTSC_safe
-	(
-		unsigned char* orig,
-		int width, int height, int channels
-	);
+scale_image_RGB_to_NTSC_safe
+        (
+                unsigned char *orig,
+                int width, int height, int channels
+        );
 
 /**
 	This function takes the RGB components of the image
@@ -65,22 +65,22 @@ int
 	compression).
 **/
 int
-	convert_RGB_to_YCoCg
-	(
-		unsigned char* orig,
-		int width, int height, int channels
-	);
+convert_RGB_to_YCoCg
+        (
+                unsigned char *orig,
+                int width, int height, int channels
+        );
 
 /**
 	This function takes the YCoCg components of the image
 	and converts them into RGB.  See above.
 **/
 int
-	convert_YCoCg_to_RGB
-	(
-		unsigned char* orig,
-		int width, int height, int channels
-	);
+convert_YCoCg_to_RGB
+        (
+                unsigned char *orig,
+                int width, int height, int channels
+        );
 
 /**
 	Converts an HDR image from an array
@@ -88,12 +88,12 @@ int
 	\return 0 if failed, otherwise returns 1
 **/
 int
-	RGBE_to_RGBdivA
-	(
-		unsigned char *image,
-		int width, int height,
-		int rescale_to_max
-	);
+RGBE_to_RGBdivA
+        (
+                unsigned char *image,
+                int width, int height,
+                int rescale_to_max
+        );
 
 /**
 	Converts an HDR image from an array
@@ -101,12 +101,12 @@ int
 	\return 0 if failed, otherwise returns 1
 **/
 int
-	RGBE_to_RGBdivA2
-	(
-		unsigned char *image,
-		int width, int height,
-		int rescale_to_max
-	);
+RGBE_to_RGBdivA2
+        (
+                unsigned char *image,
+                int width, int height,
+                int rescale_to_max
+        );
 
 #ifdef __cplusplus
 }

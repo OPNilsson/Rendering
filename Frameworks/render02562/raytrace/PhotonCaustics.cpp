@@ -8,27 +8,26 @@
 
 using namespace optix;
 
-float3 PhotonCaustics::shade(const Ray& r, HitInfo& hit, bool emit) const
-{
-  float3 rho_d = get_diffuse(hit);
+float3 PhotonCaustics::shade(const Ray &r, HitInfo &hit, bool emit) const {
+    float3 rho_d = get_diffuse(hit);
 
-  // Make a radiance estimate using the caustics photon map
-  //
-  // Input:  r          (the ray that hit the material)
-  //         hit        (info about the ray-surface intersection)
-  //         emit       (passed on to Emission::shade)
-  //
-  // Return: radiance reflected to where the ray was coming from
-  //
-  // Relevant data fields that are available (see PhotonCaustics.h and above):
-  // rho_d              (difuse reflectance of the material)
-  // tracer             (pointer to particle tracer)
-  // max_dist           (maximum radius of radiance estimate)
-  // photons            (maximum number of photons to be included in radiance estimate)
-  //
-  // Hint: Use the function tracer->caustics_irradiance(...) to do an
-  //       irradiance estimate using the photon map. This is not the 
-  //       same as a radiance estimate.
-  
-  return Lambertian::shade(r, hit, emit);
+    // Make a radiance estimate using the caustics photon map
+    //
+    // Input:  r          (the ray that hit the material)
+    //         hit        (info about the ray-surface intersection)
+    //         emit       (passed on to Emission::shade)
+    //
+    // Return: radiance reflected to where the ray was coming from
+    //
+    // Relevant data fields that are available (see PhotonCaustics.h and above):
+    // rho_d              (difuse reflectance of the material)
+    // tracer             (pointer to particle tracer)
+    // max_dist           (maximum radius of radiance estimate)
+    // photons            (maximum number of photons to be included in radiance estimate)
+    //
+    // Hint: Use the function tracer->caustics_irradiance(...) to do an
+    //       irradiance estimate using the photon map. This is not the
+    //       same as a radiance estimate.
+
+    return Lambertian::shade(r, hit, emit);
 }

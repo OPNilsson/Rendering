@@ -8,10 +8,9 @@
 #include <optix_world.h>
 #include "HitInfo.h"
 
-class Shader
-{
+class Shader {
 public:
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const = 0;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const = 0;
 };
 
 #endif // SHADER_H

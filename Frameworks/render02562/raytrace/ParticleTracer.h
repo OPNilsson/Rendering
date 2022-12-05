@@ -11,28 +11,29 @@
 #include "Light.h"
 #include "PathTracer.h"
 
-class ParticleTracer : public PathTracer
-{
+class ParticleTracer : public PathTracer {
 public:
-  ParticleTracer(unsigned int w, 
-                 unsigned int h, 
-                 Scene* s, 
-                 unsigned int max_no_of_particles,
-                 unsigned int pixel_subdivs = 1)
-    : PathTracer(w, h, s, pixel_subdivs), caustics(max_no_of_particles)
-  { }
+    ParticleTracer(unsigned int w,
+                   unsigned int h,
+                   Scene *s,
+                   unsigned int max_no_of_particles,
+                   unsigned int pixel_subdivs = 1)
+            : PathTracer(w, h, s, pixel_subdivs), caustics(max_no_of_particles) {}
 
-  void build_maps(int no_of_caustic_particles, unsigned int max_no_of_shots = 500000);
-  void draw_caustics_map();
+    void build_maps(int no_of_caustic_particles, unsigned int max_no_of_shots = 500000);
 
-  optix::float3 caustics_irradiance(const HitInfo& hit, float max_distance, int no_of_particles);
+    void draw_caustics_map();
+
+    optix::float3 caustics_irradiance(const HitInfo &hit, float max_distance, int no_of_particles);
 
 protected:
-  void trace_particle(const Light* light, const unsigned int caustics_done);
-  optix::float3 get_diffuse(const HitInfo& hit) const;
-  optix::float3 get_transmittance(const HitInfo& hit) const;
+    void trace_particle(const Light *light, const unsigned int caustics_done);
 
-  PhotonMap<> caustics;
+    optix::float3 get_diffuse(const HitInfo &hit) const;
+
+    optix::float3 get_transmittance(const HitInfo &hit) const;
+
+    PhotonMap<> caustics;
 };
 
 #endif // PARTICLE_TRACER

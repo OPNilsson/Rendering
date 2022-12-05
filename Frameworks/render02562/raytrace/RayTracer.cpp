@@ -59,17 +59,20 @@ bool RayTracer::trace_refracted(const Ray &in, const HitInfo &in_hit, Ray &out, 
     //        (c) Remember that the function must handle total internal reflection.
 
     float3 normal;
-    const float eta1 = in_hit.ray_ior;
-    const float eta2 = get_ior_out(in, in_hit, normal);
+    const float n_1 = in_hit.ray_ior;
+    const float n_2 = get_ior_out(in, in_hit, normal);
 
-    const bool ref= refract(out.direction,in.direction,normal,eta2/eta1);
+    const bool ref = refract(out.direction, in.direction, normal, n_2 / n_1);
+
+    // Refract will return false if full internal reflection occurs
     if (!ref) {
         return false;
     }
     out.origin = (in_hit.position);
     out.tmax = RT_DEFAULT_MAX;
-    out.tmin = 1e-4;
-    out_hit.ray_ior = eta2;
+    out.tmin = in.tmin;
+    out_hit.ray_ior = n_2;
+
     if (trace_to_closest(out, out_hit)) {
         out_hit.trace_depth = in_hit.trace_depth + 1;
         return true;

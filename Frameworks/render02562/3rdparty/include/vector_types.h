@@ -95,120 +95,98 @@ struct __device_builtin__ __align__(8) tag         \
 
 #endif /* !__CUDACC__ && !__CUDACC_RTC__ && !__CUDABE__ && _WIN32 && !_WIN64 */
 
-struct __device_builtin__ char1
-{
+struct __device_builtin__ char1 {
     signed char x;
 };
 
-struct __device_builtin__ uchar1
-{
+struct __device_builtin__ uchar1 {
     unsigned char x;
 };
 
 
-struct __device_builtin__ __align__(2) char2
-{
+struct __device_builtin__ __align__(2) char2 {
     signed char x, y;
 };
 
-struct __device_builtin__ __align__(2) uchar2
-{
+struct __device_builtin__ __align__(2) uchar2 {
     unsigned char x, y;
 };
 
-struct __device_builtin__ char3
-{
+struct __device_builtin__ char3 {
     signed char x, y, z;
 };
 
-struct __device_builtin__ uchar3
-{
+struct __device_builtin__ uchar3 {
     unsigned char x, y, z;
 };
 
-struct __device_builtin__ __align__(4) char4
-{
+struct __device_builtin__ __align__(4) char4 {
     signed char x, y, z, w;
 };
 
-struct __device_builtin__ __align__(4) uchar4
-{
+struct __device_builtin__ __align__(4) uchar4 {
     unsigned char x, y, z, w;
 };
 
-struct __device_builtin__ short1
-{
+struct __device_builtin__ short1 {
     short x;
 };
 
-struct __device_builtin__ ushort1
-{
+struct __device_builtin__ ushort1 {
     unsigned short x;
 };
 
-struct __device_builtin__ __align__(4) short2
-{
+struct __device_builtin__ __align__(4) short2 {
     short x, y;
 };
 
-struct __device_builtin__ __align__(4) ushort2
-{
+struct __device_builtin__ __align__(4) ushort2 {
     unsigned short x, y;
 };
 
-struct __device_builtin__ short3
-{
+struct __device_builtin__ short3 {
     short x, y, z;
 };
 
-struct __device_builtin__ ushort3
-{
+struct __device_builtin__ ushort3 {
     unsigned short x, y, z;
 };
 
 __cuda_builtin_vector_align8(short4, short x; short y; short z; short w;);
 __cuda_builtin_vector_align8(ushort4, unsigned short x; unsigned short y; unsigned short z; unsigned short w;);
 
-struct __device_builtin__ int1
-{
+struct __device_builtin__ int1 {
     int x;
 };
 
-struct __device_builtin__ uint1
-{
+struct __device_builtin__ uint1 {
     unsigned int x;
 };
 
 __cuda_builtin_vector_align8(int2, int x; int y;);
 __cuda_builtin_vector_align8(uint2, unsigned int x; unsigned int y;);
 
-struct __device_builtin__ int3
-{
+struct __device_builtin__ int3 {
     int x, y, z;
 };
 
-struct __device_builtin__ uint3
-{
+struct __device_builtin__ uint3 {
     unsigned int x, y, z;
 };
 
-struct __device_builtin__ __builtin_align__(16) int4
-{
+struct __device_builtin__ __builtin_align__(16) int4 {
     int x, y, z, w;
 };
 
-struct __device_builtin__ __builtin_align__(16) uint4
-{
+struct __device_builtin__ __builtin_align__(16) uint4 {
     unsigned int x, y, z, w;
 };
 
-struct __device_builtin__ long1
-{
+struct __device_builtin__ long1 {
     long int x;
 };
 
-struct __device_builtin__ ulong1
-{
+struct __device_builtin__ ulong1 {
     unsigned long x;
 };
 
@@ -229,28 +207,23 @@ struct __device_builtin__ __align__(2*sizeof(unsigned long int)) ulong2
 
 #endif /* __CUDACC_RTC__ || _WIN32 */
 
-struct __device_builtin__ long3
-{
+struct __device_builtin__ long3 {
     long int x, y, z;
 };
 
-struct __device_builtin__ ulong3
-{
+struct __device_builtin__ ulong3 {
     unsigned long int x, y, z;
 };
 
-struct __device_builtin__ __builtin_align__(16) long4
-{
+struct __device_builtin__ __builtin_align__(16) long4 {
     long int x, y, z, w;
 };
 
-struct __device_builtin__ __builtin_align__(16) ulong4
-{
+struct __device_builtin__ __builtin_align__(16) ulong4 {
     unsigned long int x, y, z, w;
 };
 
-struct __device_builtin__ float1
-{
+struct __device_builtin__ float1 {
     float x;
 };
 
@@ -276,73 +249,59 @@ __cuda_builtin_vector_align8(float2, float x; float y;);
 #endif /* !__CUDACC__ && !__CUDABE__ && __arm__ && __ARM_PCS_VFP &&
           __GNUC__ == 4&& __GNUC_MINOR__ == 6 */
 
-struct __device_builtin__ float3
-{
+struct __device_builtin__ float3 {
     float x, y, z;
 };
 
-struct __device_builtin__ __builtin_align__(16) float4
-{
+struct __device_builtin__ __builtin_align__(16) float4 {
     float x, y, z, w;
 };
 
-struct __device_builtin__ longlong1
-{
+struct __device_builtin__ longlong1 {
     long long int x;
 };
 
-struct __device_builtin__ ulonglong1
-{
+struct __device_builtin__ ulonglong1 {
     unsigned long long int x;
 };
 
-struct __device_builtin__ __builtin_align__(16) longlong2
-{
+struct __device_builtin__ __builtin_align__(16) longlong2 {
     long long int x, y;
 };
 
-struct __device_builtin__ __builtin_align__(16) ulonglong2
-{
+struct __device_builtin__ __builtin_align__(16) ulonglong2 {
     unsigned long long int x, y;
 };
 
-struct __device_builtin__ longlong3
-{
+struct __device_builtin__ longlong3 {
     long long int x, y, z;
 };
 
-struct __device_builtin__ ulonglong3
-{
+struct __device_builtin__ ulonglong3 {
     unsigned long long int x, y, z;
 };
 
-struct __device_builtin__ __builtin_align__(16) longlong4
-{
-    long long int x, y, z ,w;
+struct __device_builtin__ __builtin_align__(16) longlong4 {
+    long long int x, y, z, w;
 };
 
-struct __device_builtin__ __builtin_align__(16) ulonglong4
-{
+struct __device_builtin__ __builtin_align__(16) ulonglong4 {
     unsigned long long int x, y, z, w;
 };
 
-struct __device_builtin__ double1
-{
+struct __device_builtin__ double1 {
     double x;
 };
 
-struct __device_builtin__ __builtin_align__(16) double2
-{
+struct __device_builtin__ __builtin_align__(16) double2 {
     double x, y;
 };
 
-struct __device_builtin__ double3
-{
+struct __device_builtin__ double3 {
     double x, y, z;
 };
 
-struct __device_builtin__ __builtin_align__(16) double4
-{
+struct __device_builtin__ __builtin_align__(16) double4 {
     double x, y, z, w;
 };
 
@@ -414,13 +373,21 @@ typedef __device_builtin__ struct double4 double4;
 *                                                                              *
 *******************************************************************************/
 
-struct __device_builtin__ dim3
-{
+struct __device_builtin__ dim3 {
     unsigned int x, y, z;
 #if defined(__cplusplus)
     __host__ __device__ dim3(unsigned int vx = 1, unsigned int vy = 1, unsigned int vz = 1) : x(vx), y(vy), z(vz) {}
+
     __host__ __device__ dim3(uint3 v) : x(v.x), y(v.y), z(v.z) {}
-    __host__ __device__ operator uint3(void) { uint3 t; t.x = x; t.y = y; t.z = z; return t; }
+
+    __host__ __device__ operator uint3(void) {
+        uint3 t;
+        t.x = x;
+        t.y = y;
+        t.z = z;
+        return t;
+    }
+
 #endif /* __cplusplus */
 };
 

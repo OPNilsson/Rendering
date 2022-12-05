@@ -8,14 +8,14 @@
 #include <optix_world.h>
 #include "Texture.h"
 
-class HDRTexture : public Texture
-{
+class HDRTexture : public Texture {
 public:
-  void load_hdr(const char* filename);
+    void load_hdr(const char *filename);
 
 protected:
-  optix::float4 look_up(unsigned int idx);
-  float convert(unsigned char c, int e);
+    optix::float4 look_up(unsigned int idx);
+
+    float convert(unsigned char c, int e);
 };
 
 #endif // HDRTEXTURE_H

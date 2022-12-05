@@ -3,7 +3,6 @@
 
 using namespace optix;
 
-void InvSphereMap::project_direction(const float3& d, float& u, float& v) const
-{
-  // Implement an inverse sphere map here.
+void InvSphereMap::project_direction(const float3 &d, float &u, float &v) const {
+    // Implement an inverse sphere map here.
 }

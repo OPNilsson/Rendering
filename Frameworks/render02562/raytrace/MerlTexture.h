@@ -9,25 +9,32 @@
 #include <optix_world.h>
 #include "Texture.h"
 
-class MerlTexture : public Texture
-{
+class MerlTexture : public Texture {
 public:
-  MerlTexture() : Texture() { }
-  ~MerlTexture() { free(static_cast<void*>(data)); data = 0; delete [] fdata; fdata = 0; }
+    MerlTexture() : Texture() {}
 
-  // Load texture from file
-  void load(const char* filename);
+    ~MerlTexture() {
+        free(static_cast<void *>(data));
+        data = 0;
+        delete[] fdata;
+        fdata = 0;
+    }
 
-  // Look up the texel using texture space coordinates
-  virtual optix::float4 sample_nearest(const optix::float3& texcoord) const;
-  virtual optix::float4 sample_linear(const optix::float3& texcoord) const;
+    // Load texture from file
+    void load(const char *filename);
 
-  optix::float3 brdf_lookup(const optix::float3& n, const optix::float3& normalized_wi, const optix::float3& normalized_wo) const;
+    // Look up the texel using texture space coordinates
+    virtual optix::float4 sample_nearest(const optix::float3 &texcoord) const;
+
+    virtual optix::float4 sample_linear(const optix::float3 &texcoord) const;
+
+    optix::float3
+    brdf_lookup(const optix::float3 &n, const optix::float3 &normalized_wi, const optix::float3 &normalized_wo) const;
 
 protected:
-  // Pointers to image data
-  std::vector<float> brdf;
-  optix::float3 rho_d;
+    // Pointers to image data
+    std::vector<float> brdf;
+    optix::float3 rho_d;
 };
 
 #endif // MERLTEXTURE_H

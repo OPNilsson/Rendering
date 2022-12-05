@@ -8,10 +8,9 @@
 #include <optix_world.h>
 #include "SphereTexture.h"
 
-class InvSphereMap : public SphereTexture
-{
+class InvSphereMap : public SphereTexture {
 public:
-  virtual void project_direction(const optix::float3& d, float& u, float& v) const;
+    virtual void project_direction(const optix::float3 &d, float &u, float &v) const;
 };
 
 #endif // INVSPHEREMAP_H

@@ -10,20 +10,18 @@
 #include "RayTracer.h"
 #include "Shader.h"
 
-class Mirror : virtual public Shader
-{
+class Mirror : virtual public Shader {
 public:
-  Mirror(RayTracer* raytracer, unsigned int max_trace_depth = 10) 
-    : tracer(raytracer), max_depth(max_trace_depth)
-  { }
+    Mirror(RayTracer *raytracer, unsigned int max_trace_depth = 10)
+            : tracer(raytracer), max_depth(max_trace_depth) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 
 protected:
-  optix::float3 shade_new_ray(optix::Ray& r, HitInfo& hit, bool emit = true) const;
-  
-  RayTracer* tracer;
-  unsigned int max_depth;
+    optix::float3 shade_new_ray(optix::Ray &r, HitInfo &hit, bool emit = true) const;
+
+    RayTracer *tracer;
+    unsigned int max_depth;
 };
 
 #endif // MIRROR_H

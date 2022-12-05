@@ -4,10 +4,9 @@
 #include <optix_world.h>
 #include "SphereTexture.h"
 
-class PanoramicTexture : public SphereTexture
-{
+class PanoramicTexture : public SphereTexture {
 public:
-  virtual void project_direction(const optix::float3& d, float& u, float& v) const;
+    virtual void project_direction(const optix::float3 &d, float &u, float &v) const;
 };
 
 #endif // PANORAMICTEXTURE_H

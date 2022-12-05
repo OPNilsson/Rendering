@@ -58,8 +58,7 @@
 *                                                                              *
 *******************************************************************************/
 
-enum __device_builtin__ cudaRoundMode
-{
+enum __device_builtin__ cudaRoundMode {
     cudaRoundNearest,
     cudaRoundZero,
     cudaRoundPosInf,

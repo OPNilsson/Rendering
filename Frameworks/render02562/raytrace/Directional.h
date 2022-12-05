@@ -10,20 +10,18 @@
 #include "RayTracer.h"
 #include "Light.h"
 
-class Directional : public Light
-{
+class Directional : public Light {
 public:
-  Directional(RayTracer* ray_tracer, const optix::float3& emitted_radiance, const optix::float3& light_direction) 
-    : Light(ray_tracer), emission(emitted_radiance), light_dir(normalize(light_direction)) 
-  { }
+    Directional(RayTracer *ray_tracer, const optix::float3 &emitted_radiance, const optix::float3 &light_direction)
+            : Light(ray_tracer), emission(emitted_radiance), light_dir(normalize(light_direction)) {}
 
-  virtual bool sample(const optix::float3& pos, optix::float3& dir, optix::float3& L) const;
+    virtual bool sample(const optix::float3 &pos, optix::float3 &dir, optix::float3 &L) const;
 
-  std::string describe() const;
+    std::string describe() const;
 
 protected:
-  optix::float3 light_dir;
-  optix::float3 emission;
+    optix::float3 light_dir;
+    optix::float3 emission;
 };
 
 #endif // DIRECTIONAL_H

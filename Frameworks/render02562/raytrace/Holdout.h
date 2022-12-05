@@ -11,17 +11,15 @@
 #include "PathTracer.h"
 #include "MCGlossy.h"
 
-class Holdout : public MCGlossy
-{
+class Holdout : public MCGlossy {
 public:
-  Holdout(PathTracer* path_tracer, const std::vector<Light*>& light_vector, unsigned int no_of_samples)
-    : MCGlossy(path_tracer, light_vector, 10), samples(no_of_samples)
-  { }
+    Holdout(PathTracer *path_tracer, const std::vector<Light *> &light_vector, unsigned int no_of_samples)
+            : MCGlossy(path_tracer, light_vector, 10), samples(no_of_samples) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 
 protected:
-  unsigned int samples;
+    unsigned int samples;
 };
 
 #endif // HOLDOUT_H

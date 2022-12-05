@@ -18,14 +18,14 @@
  * INABILITY TO USE THIS SOFTWARE, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGES
  */
- 
- /**
- * @file   optix_datatypes.h
- * @author NVIDIA Corporation
- * @brief  OptiX public API
- *
- * OptiX public API Reference - Datatypes
- */
+
+/**
+* @file   optix_datatypes.h
+* @author NVIDIA Corporation
+* @brief  OptiX public API
+*
+* OptiX public API Reference - Datatypes
+*/
 
 #ifndef __optix_optix_datatypes_h__
 #define __optix_optix_datatypes_h__
@@ -117,47 +117,48 @@ namespace optix {
   * @ref rtMaterialSetAnyHitProgram,
   * @ref rtMaterialSetClosestHitProgram
   */
-struct Ray {
+    struct Ray {
 
 #ifdef __cplusplus
-  /** Create a Ray with undefined member values */
-  __inline__ RT_HOSTDEVICE
-  Ray(){}
 
-  /** Create a Ray copied from an exemplar */
-  __inline__ RT_HOSTDEVICE
-  Ray( const Ray &r)
-    :origin(r.origin),direction(r.direction),ray_type(r.ray_type),tmin(r.tmin),tmax(r.tmax){}
+        /** Create a Ray with undefined member values */
+        __inline__ RT_HOSTDEVICE
+        Ray() {}
 
-  /** Create a ray with a specified origin, direction, ray_type, and min/max extents. When tmax is not given, it defaults to RT_DEFAULT_MAX. */
-  __inline__ RT_HOSTDEVICE
-  Ray( float3 origin_, float3 direction_, unsigned int ray_type_, float tmin_, float tmax_ = RT_DEFAULT_MAX )
-    :origin(origin_),direction(direction_),ray_type(ray_type_),tmin(tmin_),tmax(tmax_){}
+        /** Create a Ray copied from an exemplar */
+        __inline__ RT_HOSTDEVICE
+        Ray(const Ray &r)
+                : origin(r.origin), direction(r.direction), ray_type(r.ray_type), tmin(r.tmin), tmax(r.tmax) {}
+
+        /** Create a ray with a specified origin, direction, ray_type, and min/max extents. When tmax is not given, it defaults to RT_DEFAULT_MAX. */
+        __inline__ RT_HOSTDEVICE
+        Ray(float3 origin_, float3 direction_, unsigned int ray_type_, float tmin_, float tmax_ = RT_DEFAULT_MAX)
+                : origin(origin_), direction(direction_), ray_type(ray_type_), tmin(tmin_), tmax(tmax_) {}
+
 #endif
 
-  /** The origin of the ray */
-  float3 origin;
-  /** The direction of the ray */
-  float3 direction;
-  /** The ray type associated with this ray */
-  unsigned int ray_type;
-  /** The min extent associated with this ray */
-  float tmin;
-  /** The max extent associated with this ray */
-  float tmax;
-};
+        /** The origin of the ray */
+        float3 origin;
+        /** The direction of the ray */
+        float3 direction;
+        /** The ray type associated with this ray */
+        unsigned int ray_type;
+        /** The min extent associated with this ray */
+        float tmin;
+        /** The max extent associated with this ray */
+        float tmax;
+    };
 
-static __inline__ RT_HOSTDEVICE
-Ray make_Ray( float3 origin, float3 direction, unsigned int ray_type, float tmin, float tmax )
-{
-  Ray ray;
-  ray.origin = origin;
-  ray.direction = direction;
-  ray.ray_type = ray_type;
-  ray.tmin = tmin;
-  ray.tmax = tmax;
-  return ray;
-}
+    static __inline__ RT_HOSTDEVICE
+    Ray make_Ray(float3 origin, float3 direction, unsigned int ray_type, float tmin, float tmax) {
+        Ray ray;
+        ray.origin = origin;
+        ray.direction = direction;
+        ray.ray_type = ray_type;
+        ray.tmin = tmin;
+        ray.tmax = tmax;
+        return ray;
+    }
 
 #ifdef __cplusplus
 } // namespace

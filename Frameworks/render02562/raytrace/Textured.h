@@ -14,18 +14,18 @@
 
 class Texture;
 
-class Textured : public Reflectance
-{
+class Textured : public Reflectance {
 public:
-  Textured() : texs(0) { }
+    Textured() : texs(0) {}
 
-  void set_textures(std::map<std::string, Texture*>& textures) { texs = &textures; }
+    void set_textures(std::map<std::string, Texture *> &textures) { texs = &textures; }
 
 protected:
-  virtual optix::float3 get_emission(const HitInfo& hit) const;
-  virtual optix::float3 get_diffuse(const HitInfo& hit) const;
+    virtual optix::float3 get_emission(const HitInfo &hit) const;
 
-  std::map<std::string, Texture*>* texs;
+    virtual optix::float3 get_diffuse(const HitInfo &hit) const;
+
+    std::map<std::string, Texture *> *texs;
 };
 
 #endif // TEXTURED_H

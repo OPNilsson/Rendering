@@ -13,14 +13,12 @@
 #include "Volume.h"
 #include "Phong.h"
 
-class GlossyVolume : public Volume, public Phong
-{
+class GlossyVolume : public Volume, public Phong {
 public:
-  GlossyVolume(RayTracer* raytracer, const std::vector<Light*>& light_vector, int max_trace_depth = 10) 
-    : Volume(raytracer, max_trace_depth), Phong(light_vector) 
-  { }
+    GlossyVolume(RayTracer *raytracer, const std::vector<Light *> &light_vector, int max_trace_depth = 10)
+            : Volume(raytracer, max_trace_depth), Phong(light_vector) {}
 
-  virtual optix::float3 shade(const optix::Ray& r, HitInfo& hit, bool emit = true) const;
+    virtual optix::float3 shade(const optix::Ray &r, HitInfo &hit, bool emit = true) const;
 };
 
 #endif // GLOSSYVOLUME_H

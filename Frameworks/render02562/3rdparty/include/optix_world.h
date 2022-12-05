@@ -18,18 +18,18 @@
  * INABILITY TO USE THIS SOFTWARE, EVEN IF NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGES
  */
- 
- /**
- * @file   optix_world.h
- * @author NVIDIA Corporation
- * @brief  OptiX public API C and C++ API
- *
- * This header is designed to be included by both host and device code providing access to
- * the C-API along with the C++ API found in optixpp_namespaces.h.  In addition various
- * helper classes and file will also be included when compiling C++ compatible code.
- *
- * Note that the CUDA vector types will be defined in the optix:: namespace.
- */
+
+/**
+* @file   optix_world.h
+* @author NVIDIA Corporation
+* @brief  OptiX public API C and C++ API
+*
+* This header is designed to be included by both host and device code providing access to
+* the C-API along with the C++ API found in optixpp_namespaces.h.  In addition various
+* helper classes and file will also be included when compiling C++ compatible code.
+*
+* Note that the CUDA vector types will be defined in the optix:: namespace.
+*/
 
 #ifndef __optixu_optixu_world_h__
 #define __optixu_optixu_world_h__
@@ -47,10 +47,12 @@
 
 /* None of these headers are compatible with C */
 #if defined(__cplusplus)
+
 #  include "optixu/optixu_math_namespace.h"
 #  include "optixu/optixu_aabb_namespace.h"
 #  include "optixu/optixu_matrix_namespace.h"
 #  include "optixu/optixu_math_stream_namespace.h"
+
 #endif
 
 #endif /* #ifndef __optixu_optixu_world_h__ */

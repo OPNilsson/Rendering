@@ -8,12 +8,13 @@
 #include <optix_world.h>
 #include "HDRTexture.h"
 
-class SphereTexture : public HDRTexture
-{
+class SphereTexture : public HDRTexture {
 public:
-  virtual optix::float4 sample_nearest(const optix::float3& direction) const;
-  virtual optix::float4 sample_linear(const optix::float3& direction) const;
-  virtual void project_direction(const optix::float3& d, float& u, float& v) const;
+    virtual optix::float4 sample_nearest(const optix::float3 &direction) const;
+
+    virtual optix::float4 sample_linear(const optix::float3 &direction) const;
+
+    virtual void project_direction(const optix::float3 &d, float &u, float &v) const;
 };
 
 #endif // SPHERETEXTURE_H

@@ -59,7 +59,7 @@
 
 #define __no_return__ \
         __attribute__((noreturn))
-        
+
 #if defined(__CUDACC__) || defined(__CUDA_ARCH__)
 /* gcc allows users to define attributes with underscores, 
    e.g., __attribute__((__noinline__)).
@@ -71,8 +71,8 @@
 */   
 #define __noinline__ \
         __attribute__((noinline))
-#endif /* __CUDACC__  || __CUDA_ARCH__ */       
-        
+#endif /* __CUDACC__  || __CUDA_ARCH__ */
+
 #define __forceinline__ \
         __inline__ __attribute__((always_inline))
 #define __align__(n) \
@@ -142,7 +142,7 @@
 
 #endif /* __GNUC__ || __CUDA_LIBDEVICE__ || __CUDACC_RTC__ */
 
-#if !defined(__GNUC__) || __GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 3 && !defined(__clang__) )
+#if !defined(__GNUC__) || __GNUC__ < 4 || (__GNUC__ == 4 && __GNUC_MINOR__ < 3 && !defined(__clang__))
 
 #define __specialization_static \
         static
@@ -189,7 +189,7 @@
         __location__(constant)
 #define __managed__ \
         __location__(managed)
-        
+
 #if defined(__CUDABE__) || !defined(__CUDACC__)
 #define __device_builtin__
 #define __device_builtin_texture_type__
