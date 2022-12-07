@@ -33,7 +33,7 @@ bool PointLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
 
     // The direction from the point to the light
     dir = normalize(light_pos - pos);
-    L = intensity / (dist * dist);
+
 
     // Shadow ray cutoff variables
     float epsilon = 0.0001f; // 10^-4
@@ -47,6 +47,8 @@ bool PointLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
             return false;
         }
     }
+
+    L = intensity / (dist * dist);
 
     return true;
 }
