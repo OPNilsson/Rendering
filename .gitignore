@@ -38,3 +38,6 @@ Frameworks/render02562/cmake-build-release/.ninja_log
 *.bin
 *.bin
 *.log
+Frameworks/render02562/cmake-build-release/.ninja_deps
+Frameworks/render02562/cmake-build-release/.ninja_log
+*.log

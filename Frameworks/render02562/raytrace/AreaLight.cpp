@@ -36,6 +36,8 @@ bool AreaLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
     //        (b) Use the function get_emission(...) to get the radiance
     //        emitted by a triangle in the mesh.
 
+
+
     return false;
 }
 
@@ -63,6 +65,9 @@ bool AreaLight::emit(Ray &r, HitInfo &hit, float3 &Phi) const {
     const float no_of_faces = static_cast<float>(geometry.no_faces());
 
     // Sample ray origin and direction
+    float3 origin = mesh->compute_bbox().center();
+    r = Ray(origin, make_float3(0.0f), 0.0f, 0.001f, RT_DEFAULT_MAX);
+    tracer->trace_to_closest(r, hit);
 
     // Trace ray
 
