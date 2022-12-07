@@ -41,16 +41,20 @@ float3 Phong::shade(const Ray &r, HitInfo &hit, bool emit) const {
     float3 L_i = make_float3(0.0f, 0.0f, 0.0f);
     float3 radiance = make_float3(0.0f, 0.0f, 0.0f);
 
+    const unsigned  int no_of_samples = 1; // Number of samples per light increase this to get better results (but slower)
+
     // Loop through the lights
     for (auto light: lights) {
-        if (light->sample(hit.position, dir, L_i)) {
-            dir_reflected = reflect(-dir, hit.shading_normal);
-            radiance += (rho_d * M_1_PIf
-                         + rho_s * M_1_PIf * (s + 2) / 2
-                           * pow(optix::fmaxf(dot(-r.direction, dir_reflected), 0), s))
-                        * L_i * optix::fmaxf(dot(dir, hit.shading_normal), 0);
+        // Loop over number of sample
+        for(unsigned int s=0; s < no_of_samples; s++) {
+            if (light->sample(hit.position, dir, L_i)) {
+                dir_reflected = reflect(-dir, hit.shading_normal);
+                radiance += (rho_d * M_1_PIf
+                             + rho_s * M_1_PIf * (s + 2) / 2
+                               * pow(optix::fmaxf(dot(-r.direction, dir_reflected), 0), s))
+                            * L_i * optix::fmaxf(dot(dir, hit.shading_normal), 0);
+            }
         }
-
     }
 
     return Lambertian::shade(r, hit, emit);

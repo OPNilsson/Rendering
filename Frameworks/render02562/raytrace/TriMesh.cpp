@@ -71,6 +71,18 @@ bool TriMesh::intersect(const Ray &r, HitInfo &hit, unsigned int prim_idx) const
             hit.shading_normal = hit.geometric_normal;
             hit.material = &materials[mat_idx[prim_idx]];
 
+            float alpha = 1 - beta - gamma;
+
+            // If the mesh has vertex normals, use them to compute the shading normal
+            if(has_normals()) {
+                float3 n0 = normals.vertex(normals.face(prim_idx).x);
+                float3 n1 = normals.vertex(normals.face(prim_idx).y);
+                float3 n2 = normals.vertex(normals.face(prim_idx).z);
+                hit.shading_normal = normalize(alpha * n0 + beta * n1 + gamma * n2);
+            } else {
+                hit.shading_normal = hit.geometric_normal;
+            }
+
             return true;
         }
     }

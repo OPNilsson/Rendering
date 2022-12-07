@@ -36,9 +36,50 @@ bool AreaLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
     //        (b) Use the function get_emission(...) to get the radiance
     //        emitted by a triangle in the mesh.
 
+    // Relevant data formulas using an approximation of the area light:
+    // L_r = fr(V/r^2)(w_i dot n) * l_e
+    // l_e = sum_index(-w_i dot n_e_index) L_e_index * A_e_index
+    // fr(x,w_i, w_o) = dL_r(x, w_o) / dE(x, w_i)  = dL_r(x, w_o) / L_i cos(theta) dw
+    // V = 0 || 1 if in shadow || not in shadow
+    // r = distance from point to light random light source
+    // Monte Carlo estimation of the integral:
+    // L_N = L_e + 1/N sum_index(V_index * fr(x, w_j', w) * L_i * cos(theta)/ pdf(wj'))
+    // pdf(wj') = cos theta / pi
+
+    // Use the center of the axis aligned bounding box of the area light mesh as the position.
+    float3 light_pos = mesh->compute_bbox().center();
+    float3 normal = normalize(light_pos - pos);
+    float distance = length(light_pos - pos);
+    dir = normalize(light_pos - pos);
+
+    // Shadow ray cutoff variables
+    float epsilon = 0.0001f; // 10^-4zz
+    float t_max = distance - epsilon; // ||p-x|| - epsilon
+
+    // If shadows are enabled, check if the point is in shadow
+    if (shadows) {
+        Ray shadow_ray = Ray(pos, dir, 0.0f, epsilon, t_max);
+        HitInfo shadow_hit;
+        if (tracer->trace_to_any(shadow_ray, shadow_hit)) {
+            return false;
+        }
+    }
+
+    // The normalized sum of the vertex normals can be used as the face normal.
+    float3 face_normal_sum = make_float3(0.0f);
+    for(unsigned int i=0; i < normals.no_vertices(); i++){
+        face_normal_sum += normals.vertex(i);
+    }
+    face_normal_sum = normalize(face_normal_sum);
+
+    for (unsigned int i = 0; i < mesh->geometry.no_faces(); i++) {
+        // L_r = fr * V * L_e * (w_i dot n) * ((-w_i dot n_e) / r^2)  * dA_e
+        L += get_emission(i) * dot(dir, normal) * (dot(-dir, face_normal_sum) / (distance * distance)) * mesh->face_areas[i];
+    }
 
 
-    return false;
+
+    return true;
 }
 
 bool AreaLight::emit(Ray &r, HitInfo &hit, float3 &Phi) const {
@@ -65,9 +106,11 @@ bool AreaLight::emit(Ray &r, HitInfo &hit, float3 &Phi) const {
     const float no_of_faces = static_cast<float>(geometry.no_faces());
 
     // Sample ray origin and direction
-    float3 origin = mesh->compute_bbox().center();
-    r = Ray(origin, make_float3(0.0f), 0.0f, 0.001f, RT_DEFAULT_MAX);
-    tracer->trace_to_closest(r, hit);
+    std::cout << "Surface Area: "<< mesh->surface_area << std::endl;
+    for(unsigned int i = 0; i <= mesh->surface_area; i++){
+        // Pick a random face
+        float face = mt_random() * no_of_faces;
+    }
 
     // Trace ray
 

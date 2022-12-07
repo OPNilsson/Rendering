@@ -35,11 +35,15 @@ bool PointLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
     dir = normalize(light_pos - pos);
     L = intensity / (dist * dist);
 
+    // Shadow ray cutoff variables
+    float epsilon = 0.0001f; // 10^-4
+    float t_max = dist - epsilon; // ||p-x|| - epsilon
+
     // If shadows are enabled, check if the point is in shadow
     if (shadows) {
-        Ray shadow_ray = Ray(pos, dir, 0.0f, 0.001f, dist - 0.001f);
+        Ray shadow_ray = Ray(pos, dir, 0.0f, epsilon, t_max);
         HitInfo shadow_hit;
-        if (tracer->trace_to_closest(shadow_ray, shadow_hit)) {
+        if (tracer->trace_to_any(shadow_ray, shadow_hit)) {
             return false;
         }
     }
@@ -63,7 +67,6 @@ bool PointLight::emit(Ray &r, HitInfo &hit, float3 &Phi) const {
     //
     // Hint: When sampling the ray direction, use the function
     //       mt_random() to get a random number in [0,1].
-
 
     float3 dir;
 

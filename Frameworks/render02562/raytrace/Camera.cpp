@@ -83,6 +83,8 @@ Ray Camera::get_ray(const float2 &coords) const {
 // OpenGL
 
 void Camera::glSetPerspective(unsigned int width, unsigned int height) const {
+    //std::cout << "Width (" << width << " ) x Height (" << height << " )" << std::endl;
+
     GLdouble aspect = width / static_cast<float>(height);
 
     glMatrixMode(GL_PROJECTION);

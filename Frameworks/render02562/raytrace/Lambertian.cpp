@@ -33,13 +33,21 @@ float3 Lambertian::shade(const Ray &r, HitInfo &hit, bool emit) const {
     //
     // Hint: Call the sample function associated with each light in the scene.
 
+    const unsigned  int no_of_samples = 1; // Number of samples per light increase this to get better results (but slower)
+
     // Loop over all lights
     for (unsigned int i = 0; i < lights.size(); ++i) {
         float3 dir, L;
-        if (lights[i]->sample(hit.position, dir, L)) {
-            float cos_theta = dot(dir, hit.shading_normal);
-            if (cos_theta > 0.0f) {
-                result += (rho_d * M_1_PIf) * L * cos_theta;
+        // Loop over number of sample
+        for(unsigned int s=0; s < no_of_samples; s++){
+            // Sample the light
+            if (lights[i]->sample(hit.position, dir, L)) {
+                // An object was hit by the light ray
+                // Compute the cosine of the angle between the light direction and the normal
+                float cos_theta = dot(dir, hit.shading_normal);
+                if (cos_theta > 0.0f) {
+                    result += (rho_d * M_1_PIf) * L * cos_theta;
+                }
             }
         }
     }

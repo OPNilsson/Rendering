@@ -27,7 +27,26 @@ bool Directional::sample(const float3 &pos, float3 &dir, float3 &L) const {
     // light_dir  (direction of the emitted light)
     // emission   (radiance of the emitted light)
 
-    return false;
+    // The direction toward the light is opposite to the light direction
+    dir = -light_dir;
+
+    // Shadow ray cutoff variables
+    float epsilon = 0.0001f; // 10^-4
+    float t_max = RT_DEFAULT_MAX - epsilon; // cannot be calculated because of the infinite light source
+
+    // If shadows are enabled, check if the point is in shadow
+    if (shadows) {
+        Ray shadow_ray = Ray(pos, dir, 0.0f, epsilon, t_max);
+        HitInfo shadow_hit;
+
+        if (tracer->trace_to_any(shadow_ray, shadow_hit)) {
+            return false;
+        }
+    }
+
+    L = emission;
+
+    return true;
 }
 
 string Directional::describe() const {
