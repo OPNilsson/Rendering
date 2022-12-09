@@ -33,22 +33,23 @@ float3 RayCaster::compute_pixel(unsigned int x, unsigned int y) const {
     float3 result;
     float2 pos = make_float2(x, y) * win_to_ip + lower_left;
 
-    Ray r = scene->get_camera()->get_ray(pos);
-    HitInfo hit;
-
-    scene->closest_hit(r, hit);
-
-    // Perhaps handle the case where the ray has hit more than one object using the hit.trace_depth variable.
-    // Right now the plane is the first thing that is hit, and the sphere is the second thing that is hit.
-    // The plane is the first thing that is hit because it is the first thing that is added to the scene.
-    // We either need to add the plane last, or we need to implement a back hit on the plane to draw the scene correctly.
-    if (hit.has_hit) {
-        result = get_shader(hit)->shade(r, hit);
-    } else {
-        result = get_background();
+    // Start of the Antialiasing implementation (Task 3)
+    // This implementation is based on the code from the supplementary material
+    for(unsigned int i = 0; i < subdivs; i++) {
+        for (int j = 0; j < subdivs; ++j) {
+            float2 jitter_pos = jitter[i * subdivs + j];
+            Ray ray = scene->get_camera()->get_ray(pos + jitter_pos);
+            HitInfo hit_info;
+            if (scene->closest_hit(ray, hit_info)) {
+                result += scene->get_shader(hit_info)->shade(ray, hit_info);
+            } else {
+                result += get_background(ray.direction);
+            }
+        }
     }
 
-    return result;
+    // Sub-pixels = subdivs * subdivs (subdivs = 1 for no antialiasing)
+    return result / (subdivs * subdivs);
 }
 
 float3 RayCaster::get_background(const float3 &dir) const {
@@ -77,8 +78,15 @@ void RayCaster::compute_jitters() {
     lower_left = (win_to_ip - make_float2(aspect, 1.0f)) * 0.5f;
     step = win_to_ip / static_cast<float>(subdivs);
 
+//    cout << "Pixel size: " << win_to_ip.x << " " << win_to_ip.y << endl;
+//    cout << "Lower left: " << lower_left.x << " " << lower_left.y << endl;
+//    cout << "Step: " << step.x << " " << step.y << endl;
+//    cout<< "Subdivs: " << subdivs << endl;
+
     jitter.resize(subdivs * subdivs);
     for (unsigned int i = 0; i < subdivs; ++i)
         for (unsigned int j = 0; j < subdivs; ++j)
             jitter[i * subdivs + j] = make_float2(safe_mt_random() + j, safe_mt_random() + i) * step - win_to_ip * 0.5f;
+
+//    cout << "Jitter: " << jitter[0].x << " " << jitter[0].y << endl;
 }

@@ -35,27 +35,34 @@ float3 Phong::shade(const Ray &r, HitInfo &hit, bool emit) const {
     //
     // Hint: Call the sample function associated with each light in the scene.
 
-    // Sample variables
+    float3 result = Lambertian::shade(r, hit, emit);
+
     float3 dir = make_float3(0.0f, 0.0f, 0.0f);
-    float3 dir_reflected = make_float3(0.0f, 0.0f, 0.0f);
-    float3 L_i = make_float3(0.0f, 0.0f, 0.0f);
+    float3 reflection = make_float3(0.0f, 0.0f, 0.0f);
+    float3 light_dir = make_float3(0.0f);
+    float3 L_i = make_float3(0.0f);
     float3 radiance = make_float3(0.0f, 0.0f, 0.0f);
 
-    const unsigned  int no_of_samples = 1; // Number of samples per light increase this to get better results (but slower)
+    float spec = 0.0f;
 
-    // Loop through the lights
-    for (auto light: lights) {
-        // Loop over number of sample
-        for(unsigned int s=0; s < no_of_samples; s++) {
-            if (light->sample(hit.position, dir, L_i)) {
-                dir_reflected = reflect(-dir, hit.shading_normal);
-                radiance += (rho_d * M_1_PIf
-                             + rho_s * M_1_PIf * (s + 2) / 2
-                               * pow(optix::fmaxf(dot(-r.direction, dir_reflected), 0), s))
-                            * L_i * optix::fmaxf(dot(dir, hit.shading_normal), 0);
+    // Loop through all the lights in the scene
+    for(auto light: lights){
+        // Sample the light
+        if(light->sample(hit.position, light_dir, L_i)){
+            // Calculate the reflection vector
+            reflection = reflect(-light_dir, hit.shading_normal);
+
+            // Calculate the dot product between the reflection vector and the ray direction
+            spec = dot(reflection, -r.direction);
+            if(spec > 0.0001f){
+                radiance += ( rho_d * M_1_PIf
+                         + rho_s * ((M_1_PIf * (s + 2) ) / 2)
+                         * pow(dot(-r.direction, reflection), spec)
+                ) * L_i * dot(r.direction, hit.shading_normal);
+                result += rho_s * L_i * pow(spec, s);
             }
         }
     }
 
-    return Lambertian::shade(r, hit, emit);
+    return result;
 }
