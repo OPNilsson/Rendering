@@ -33,13 +33,9 @@ float3 Lambertian::shade(const Ray &r, HitInfo &hit, bool emit) const {
     //
     // Hint: Call the sample function associated with each light in the scene.
 
-    const unsigned  int no_of_samples = 1; // Number of samples per light increase this to get better results (but slower)
-
     // Loop over all lights
     for (unsigned int i = 0; i < lights.size(); ++i) {
         float3 dir, L;
-        // Loop over number of sample
-        for(unsigned int s=0; s < no_of_samples; s++){
             // Sample the light
             if (lights[i]->sample(hit.position, dir, L)) {
                 // An object was hit by the light ray
@@ -49,7 +45,6 @@ float3 Lambertian::shade(const Ray &r, HitInfo &hit, bool emit) const {
                     result += (rho_d * M_1_PIf) * L * cos_theta;
                 }
             }
-        }
     }
 
     return result + Emission::shade(r, hit, emit);

@@ -119,3 +119,6 @@
 662	800	6923000982600052	D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/bin/raytrace.exe	ba3e9d75af87eee8
 4	667	6923002038647620	CMakeFiles/raytrace.dir/raytrace/Glossy.cpp.obj	16f35eb55a005947
 670	810	6923002040037616	D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/bin/raytrace.exe	ba3e9d75af87eee8
+10	733	6923040056152854	CMakeFiles/raytrace.dir/raytrace/Lambertian.cpp.obj	1b438dba2167107c
+5	973	6923040058547465	CMakeFiles/raytrace.dir/raytrace/AreaLight.cpp.obj	98c1c21356005442
+979	1132	6923040060097436	D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render02562/bin/raytrace.exe	ba3e9d75af87eee8
