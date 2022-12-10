@@ -38,7 +38,7 @@ float3 Glossy::shade(const Ray &r, HitInfo &hit, bool emit) const {
         return make_float3(0.0f);
     }
 
-    float R;
+    float R = 0.1f;
     Ray reflected, refracted;
     HitInfo hit_reflected, hit_refracted;
     tracer->trace_reflected(r, hit, reflected, hit_reflected);
