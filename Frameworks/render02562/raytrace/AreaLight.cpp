@@ -46,16 +46,35 @@ bool AreaLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
     // L_N = L_e + 1/N sum_index(V_index * fr(x, w_j', w) * L_i * cos(theta)/ pdf(wj'))
     // pdf(wj') = cos theta / pi
 
-    // Use the center of the axis aligned bounding box of the area light mesh as the position.
-    float3 light_pos = mesh->compute_bbox().center();
-    float3 normal = normalize(light_pos - pos);
-    float distance = length(light_pos - pos);
-    dir = normalize(light_pos - pos);
+    // Get random triangle from the light mesh
+    double rand_index = mt_random_half_open() * mesh->geometry.no_faces();
+    uint3 rand_face = mesh->geometry.face(rand_index);
+
+    double xi_1 = mt_random_half_open();
+    double xi_2 = mt_random_half_open();
+
+    float sqrt_xi_1 = sqrt(xi_1);
+    float u = 1 - sqrt_xi_1;
+    float v = (1 - xi_2) * sqrt_xi_1;
+    float w = xi_2 * sqrt_xi_1;
+
+    // Interpolate across the face triangle for smooth shading
+    float3 q0 = mesh->geometry.vertex(rand_face.x),
+            q1 = mesh->geometry.vertex(rand_face.y),
+            q2 = mesh->geometry.vertex(rand_face.z);
+
+    // Setup light ray source
+    float3 light_pos = q0 * u + q1 * v + q2 * w;;
+    float3 const temp_dir = light_pos - pos;
+    float const dir_dot = dot(temp_dir, temp_dir);
+    float const distance = sqrt(dir_dot);
+    dir = temp_dir / distance;
 
     // Shadow ray cutoff variables
     float epsilon = 0.0001f; // 10^-4zz
     float t_max = distance - epsilon; // ||p-x|| - epsilon
 
+    // This is also calculating V otherwise known as the visibility
     // If shadows are enabled, check if the point is in shadow
     if (shadows) {
         Ray shadow_ray = Ray(pos, dir, 0.0f, epsilon, t_max);
@@ -65,19 +84,9 @@ bool AreaLight::sample(const float3 &pos, float3 &dir, float3 &L) const {
         }
     }
 
-    // The normalized sum of the vertex normals can be used as the face normal.
-    float3 face_normal_sum = make_float3(0.0f);
-    for(unsigned int i=0; i < normals.no_vertices(); i++){
-        face_normal_sum += normals.vertex(i);
-    }
-    face_normal_sum = normalize(face_normal_sum);
-
     for (unsigned int i = 0; i < mesh->geometry.no_faces(); i++) {
-        // L_r = fr * V * L_e * (w_i dot n) * ((-w_i dot n_e) / r^2)  * dA_e
-        L += get_emission(i) * dot(dir, normal) * (dot(-dir, face_normal_sum) / (distance * distance)) * mesh->face_areas[i];
+        L += dot(-dir, normalize(mesh->normals.vertex(i))) / (distance * distance) * get_emission(i) * mesh->face_areas[i];;
     }
-
-
 
     return true;
 }
