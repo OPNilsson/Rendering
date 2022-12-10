@@ -29,5 +29,19 @@ float3 PhotonCaustics::shade(const Ray &r, HitInfo &hit, bool emit) const {
     //       irradiance estimate using the photon map. This is not the
     //       same as a radiance estimate.
 
+    float3 irradiance = tracer->caustics_irradiance(hit, max_dist, photons);
+
+    // L = I / r^2
+    float3 radiance = irradiance / (max_dist * max_dist);
+
+    // fr = rho_d / PI
+    float3 fr = rho_d * M_1_PIf;
+
+    float3 L = Lambertian::shade(r, hit, emit);
+    float3 L_r = radiance * fr;
+
+    return L + L_r; // The combination of the two shading models
+    return  L_r; // Just the caustic shading
+
     return Lambertian::shade(r, hit, emit);
 }

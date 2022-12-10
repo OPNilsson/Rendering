@@ -70,16 +70,16 @@ bool PointLight::emit(Ray &r, HitInfo &hit, float3 &Phi) const {
     // Hint: When sampling the ray direction, use the function
     //       mt_random() to get a random number in [0,1].
 
-    float3 dir;
+    float3 direction;
 
     do {
-        dir.x = 2.0f * mt_random() - 1.0f;
-        dir.y = 2.0f * mt_random() - 1.0f;
-        dir.z = 2.0f * mt_random() - 1.0f;
-    } while (dot(dir, dir) > 1.0f);
-    dir = normalize(dir);
+        direction.x = 2.0f * mt_random() - 1.0f;
+        direction.y = 2.0f * mt_random() - 1.0f;
+        direction.z = 2.0f * mt_random() - 1.0f;
+    } while (dot(direction, direction) > 1.0f);
+    direction = normalize(direction);
 
-    r = Ray(light_pos, dir, 0, 1e-4, RT_DEFAULT_MAX);
+    r = Ray(light_pos, direction, 0, 1e-4, RT_DEFAULT_MAX);
     tracer->trace_to_closest(r, hit);
 
     if (hit.has_hit) {

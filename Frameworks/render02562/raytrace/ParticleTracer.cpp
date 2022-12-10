@@ -83,25 +83,63 @@ void ParticleTracer::trace_particle(const Light *light, const unsigned int caust
     Ray r;
     HitInfo hit;
 
+    float3 phi = make_float3(0.0f);
+
+    // Emit a photon from the light source
+    if (!light->emit(r,hit, phi)){
+        return; // No photon emitted
+    }
+
     // Forward from all specular surfaces
     while (scene->is_specular(hit.material) && hit.trace_depth < 500) {
         switch (hit.material->illum) {
             case 3:  // mirror materials
             {
                 // Forward from mirror surfaces here
-                return;
+                Ray reflected_ray;
+                HitInfo reflected_hit;
+
+                // Check if reflected ray hits anything
+                if (!trace_reflected(r, hit, reflected_ray, reflected_hit)){
+                    return; // Photon hit nothing
+                }
+
+                r = reflected_ray;
+                hit = reflected_hit;
             }
                 break;
             case 11: // absorbing volume
             case 12: // absorbing glossy volume
             {
                 // Handle absorption here (Worksheet 8)
+                if (hit.material->illum > 10){
+                    float3 trans = expf(-get_transmittance(hit) * hit.dist);
+                    phi *= trans;
+                }
             }
             case 2:  // glossy materials
             case 4:  // transparent materials
             {
                 // Forward from transparent surfaces here
-                return;
+                Ray out; // The ray that is transmitted or reflected
+                HitInfo out_hit;
+                float R = 0.0f; // The reflectance
+
+                if(!trace_refracted(r, hit, out, out_hit, R)){
+                    return; // Nothing was hit
+                };
+
+                // Russian Roulette to decide whether to reflect or refract
+                double p = mt_random();
+                if(p < R){
+                    // Reflect
+                    if(!trace_reflected(r, hit, out, out_hit)){
+                        return; // Nothing was hit
+                    }
+                }
+
+                r=out;
+                hit=out_hit;
             }
                 break;
             default:
@@ -112,6 +150,11 @@ void ParticleTracer::trace_particle(const Light *light, const unsigned int caust
     // Store in caustics map at first diffuse surface
     // Hint: When storing, the convention is that the photon direction
     //       should point back toward where the photon came from.
+
+    if(hit.trace_depth > 0){
+        caustics.store(phi,hit.position, -r.direction);
+    }
+
 }
 
 float3 ParticleTracer::get_diffuse(const HitInfo &hit) const {
@@ -120,12 +163,17 @@ float3 ParticleTracer::get_diffuse(const HitInfo &hit) const {
 }
 
 float3 ParticleTracer::get_transmittance(const HitInfo &hit) const {
+    float3 transmittance = make_float3(1.0f);
+
     if (hit.material) {
         // Compute and return the transmittance using the diffuse reflectance of the material.
         // Diffuse reflectance rho_d does not make sense for a specular material, so we can use
         // this material property as an absorption coefficient. Since absorption has an effect
         // opposite that of reflection, using 1/rho_d-1 makes it more intuitive for the user.
         float3 rho_d = make_float3(hit.material->diffuse[0], hit.material->diffuse[1], hit.material->diffuse[2]);
+        float3 sigma = (1.0f / rho_d) - 1.0f; // Extinction coefficient
+        transmittance = sigma;
     }
-    return make_float3(1.0f);
+
+    return transmittance;
 }
