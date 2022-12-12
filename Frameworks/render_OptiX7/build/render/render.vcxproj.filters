@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\ObjScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\HDRLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\QuatTrackBall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\ObjScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\HDRLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\QuatTrackBall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\sampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\cdf_bsearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\complex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\fresnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\microfacet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\envmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\Directional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\AreaLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\render\shaders.cu">
+      <Filter>CUDA Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CUDA Files">
+      <UniqueIdentifier>{5732CDE4-EDAD-3B97-9E36-DC9934CBC1B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1DE5C059-ACD8-378D-8F9B-AB5EEE1446F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0451065B-F5A7-37F8-AE6A-0AF23074FFA6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

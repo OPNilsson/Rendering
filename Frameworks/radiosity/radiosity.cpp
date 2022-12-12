@@ -59,6 +59,8 @@ void displayMyPolygons() {
 		for (int j=0;j<polygons[i]->vertices;j++) {
 
 			Vec3f position = vertices[polygons[i]->vertex[j]]->position;
+			Vec3f color = vertices[polygons[i]->vertex[j]]->color;
+			glColor3f(color[0], color[1], color[2]);
 			glVertex3f(position[0], position[1], position[2]);
 		}
 		glEnd();

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\GLDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\PPMLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\sutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Trackball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\sampleConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\BufferView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\GeometryData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\LocalGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\MaterialData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Aabb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\CUDAOutputBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\GLDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\PPMLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Preprocessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\sutilapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\sutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\Trackball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\vec_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\sutil\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\sphere.cu">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda\whitted.cu">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1DE5C059-ACD8-378D-8F9B-AB5EEE1446F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0451065B-F5A7-37F8-AE6A-0AF23074FFA6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

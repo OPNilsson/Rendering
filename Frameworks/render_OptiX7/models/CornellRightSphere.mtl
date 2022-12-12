@@ -1,0 +1,23 @@
+newmtl glass
+Ns 96.078431
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 1.0 1.0 1.0
+Ni 1.5
+illum 4
+
+newmtl MerlotWine
+Ns 100.0
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 1.0 1.0 1.0
+Ni 1.335
+illum 12
+
+newmtl frostedGlass
+Ns 0.001
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 1.0 1.0 1.0
+Ni 1.5
+illum 5

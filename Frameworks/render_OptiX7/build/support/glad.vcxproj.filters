@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\support\glad\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\support\KHR\khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\support\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\support\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1DE5C059-ACD8-378D-8F9B-AB5EEE1446F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0451065B-F5A7-37F8-AE6A-0AF23074FFA6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

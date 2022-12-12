@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15AAD3DE-AE6B-3A50-9741-7E4C4927D9E6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>DemandLoading</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DemandLoading.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DemandLoading</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DemandLoading.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DemandLoading</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DemandLoading.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DemandLoading</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DemandLoading.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DemandLoading</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w34101 /w34189 /w34018 /w34389</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4996;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w34101 /w34189 /w34018 /w34389</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4355;4996;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w34101 /w34189 /w34018 /w34389</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4355;4996;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w34101 /w34189 /w34018 /w34389</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4996;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.6.0\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\cuda;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\..\..\support;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PagingSystemKernels.cu">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building NVCC (Device) object lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D check_dependencies:BOOL=ON -D "CCBIN:PATH=$(VCInstallDir)Tools/MSVC/$(VCToolsVersion)/bin/Host$(Platform)/$(PlatformTarget)" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj -D generated_cubin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cubin.txt -D generated_fatbin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.fatbin.txt -P D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/PagingSystemKernels.dir//PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\ptx\$(Configuration)\PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building NVCC (Device) object lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D check_dependencies:BOOL=ON -D "CCBIN:PATH=$(VCInstallDir)Tools/MSVC/$(VCToolsVersion)/bin/Host$(Platform)/$(PlatformTarget)" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj -D generated_cubin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cubin.txt -D generated_fatbin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.fatbin.txt -P D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/PagingSystemKernels.dir//PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\ptx\$(Configuration)\PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building NVCC (Device) object lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D check_dependencies:BOOL=ON -D "CCBIN:PATH=$(VCInstallDir)Tools/MSVC/$(VCToolsVersion)/bin/Host$(Platform)/$(PlatformTarget)" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj -D generated_cubin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cubin.txt -D generated_fatbin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.fatbin.txt -P D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/PagingSystemKernels.dir//PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\ptx\$(Configuration)\PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building NVCC (Device) object lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D check_dependencies:BOOL=ON -D "CCBIN:PATH=$(VCInstallDir)Tools/MSVC/$(VCToolsVersion)/bin/Host$(Platform)/$(PlatformTarget)" -D build_configuration:STRING=$(ConfigurationName) -D generated_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj -D generated_cubin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cubin.txt -D generated_fatbin_file:STRING=D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/ptx/$(Configuration)/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.fatbin.txt -P D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/PagingSystemKernels.dir//PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\ptx\$(Configuration)\PagingSystemKernels_generated_PagingSystemKernels.cu.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7 -BD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build --check-stamp-file D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindCUDA\run_nvcc.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindOpenEXR.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindZlibStatic.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7 -BD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build --check-stamp-file D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindCUDA\run_nvcc.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindOpenEXR.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindZlibStatic.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7 -BD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build --check-stamp-file D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindCUDA\run_nvcc.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindOpenEXR.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindZlibStatic.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7 -BD:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build --check-stamp-file D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindCUDA\run_nvcc.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindOpenEXR.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\CMake\FindZlibStatic.cmake;D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\PagingSystemKernels.dir\PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\DemandLoaderImpl.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\DemandLoaderImpl.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\DeviceContextImpl.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\DeviceContextImpl.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PageMappingsContext.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PageTableManager.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PagingSystem.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PagingSystem.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\PagingSystemKernels.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestContext.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestHandler.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestProcessor.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestProcessor.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestQueue.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\RequestQueue.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\ResourceRequestHandler.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\ResourceRequestHandler.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\TicketImpl.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\CheckerBoardImage.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\DemandLoader.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\DemandTexture.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\DeviceContext.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\ImageReader.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\MultiCheckerImage.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\Options.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\Resource.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\Statistics.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\Texture2D.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\TextureDescriptor.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\TextureInfo.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\TextureSampler.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\Ticket.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\include\DemandLoading\TileIndexing.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\Allocators.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\AsyncItemPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\Buffers.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\BulkMemory.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\BulkPinnedItemPool.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\DeviceContextPool.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\DeviceContextPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\DeviceMemoryManager.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\EventPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\FixedPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\PinnedItemPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\PinnedMemoryManager.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\PinnedRequestContextPool.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\SamplerPool.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\TilePool.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Memory\TilePool.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\CheckerBoardImage.cpp" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\DemandTextureImpl.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\DemandTextureImpl.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\ImageReader.cpp" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\SamplerRequestHandler.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\SamplerRequestHandler.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\SparseTexture.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\SparseTexture.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\TextureInfo.cpp" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\TextureRequestHandler.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Textures\TextureRequestHandler.h" />
+    <ClCompile Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\DeviceSet.cpp" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\DeviceSet.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\Exception.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\Math.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\MutexArray.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\NVTXProfiling.h" />
+    <ClInclude Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\Util\Stopwatch.h" />
+    <Object Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\ptx\$(Configuration)\PagingSystemKernels_generated_PagingSystemKernels.cu.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\ZERO_CHECK.vcxproj">
+      <Project>{10D6EFCC-E05C-348F-951D-AC1102438420}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

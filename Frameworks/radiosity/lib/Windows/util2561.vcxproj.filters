@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{30dae2e8-795b-403e-b8d3-bad428db68ff}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CGLA">
+      <UniqueIdentifier>{19a23409-5975-4e88-906c-2638b2c62c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{968745f4-28b3-4a87-9d56-76b09b44cc3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{f2dc229b-6526-4587-97fa-7b23f6e21bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{f68e6972-9a50-4052-a36e-854827bd9d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\X3DSceneGraph">
+      <UniqueIdentifier>{9267f027-778b-4e5c-a2ea-7d1d5ea293d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{98f4b0ac-b00e-4f3b-abe3-1ba9a36b21dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BMesh">
+      <UniqueIdentifier>{dc7b4230-8c29-4b21-b899-e965d5486a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\glew">
+      <UniqueIdentifier>{fbec245e-1d83-41e5-8cda-133f922711b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{cf48b0e8-8fc4-4480-8b92-a3080aa66f5d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libsrc\Cgla\eigensolution.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat2x2f.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat3x3f.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat4x4f.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Quaternion.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Cgla\statistics.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\TableTrigonometry.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec2f.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec2i.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec3f.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec3i.cpp">
+      <Filter>Source Files\CGLA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Common\RootSolvers.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Components\BinSave.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Components\Parse.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Components\ResourceLoader.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Graphics\DisplayText.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Graphics\PPMBitmap.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Graphics\TrackBall.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\ImageLoader.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\IndexedFaceSet.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraph.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraphLoader.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraphTools.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\TextureLoader.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\TGA.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\Tools.cpp">
+      <Filter>Source Files\X3DSceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Geometry\AABB.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Geometry\AABBTools.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\AdjFace.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\AdjFaceList.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\draw.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\Instance.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\load_mesh.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\Material.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\obj_load.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\Object.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\OneRing.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\OneRingDB.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\Texmap.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\TriMesh.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\vrml_save.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\x3d_load.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\BMesh\X3DBMesh.cpp">
+      <Filter>Source Files\BMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\glew\glew.c">
+      <Filter>Source Files\glew</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

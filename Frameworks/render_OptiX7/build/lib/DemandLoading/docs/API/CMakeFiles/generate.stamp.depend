@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindDoxygen.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/docs/API/CMakeLists.txt
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/docs/API/Doxyfile

@@ -1,0 +1,10 @@
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/CMakeFiles/ALL_BUILD.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/CMakeFiles/ZERO_CHECK.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/render/CMakeFiles/render.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/sutil/CMakeFiles/sutil_7_sdk.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/DemandLoading.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/docs/API/CMakeFiles/doc.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/support/CMakeFiles/glad.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/support/GLFW/CMakeFiles/ALL_BUILD.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/support/GLFW/src/CMakeFiles/glfw.dir
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/support/imgui/CMakeFiles/imgui.dir

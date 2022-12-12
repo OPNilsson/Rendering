@@ -1,0 +1,6 @@
+newmtl plane
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+illum 30
+Ni 1.0

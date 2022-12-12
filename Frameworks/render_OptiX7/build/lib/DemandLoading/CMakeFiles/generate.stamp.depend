@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/CMake/FindCUDA/run_nvcc.cmake
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/CMake/FindOpenEXR.cmake
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/CMake/FindZlibStatic.cmake
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/build/lib/DemandLoading/CMakeFiles/PagingSystemKernels.dir/PagingSystemKernels_generated_PagingSystemKernels.cu.obj.depend
+D:/Documents/School/Denmark/2022/Fall/Rendering/Journal/Rendering/Frameworks/render_OptiX7/lib/DemandLoading/CMakeLists.txt

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\CMakeFiles\22c01002a01989e16421acba21efa8f3\doc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\lib\DemandLoading\docs\API\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Documents\School\Denmark\2022\Fall\Rendering\Journal\Rendering\Frameworks\render_OptiX7\build\lib\DemandLoading\docs\API\CMakeFiles\doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{30189F72-890A-3856-BF07-0830D3B96F0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

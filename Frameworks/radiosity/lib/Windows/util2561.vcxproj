@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7BFCED77-A7ED-41E8-8972-80D7A222D75A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include;../../include/CGLA;../../include/BMesh;../../include/Components;../../include/Graphics;../../include/X3DSceneGraph;../../include/Geometry;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Debug/util2561.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level1</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0406</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>util2561d.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../include;../../include/CGLA;../../include/BMesh;../../include/Components;../../include/Graphics;../../include/X3DSceneGraph;../../include/Geometry;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Release/util2561.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level1</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0406</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>util2561.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libsrc\Cgla\eigensolution.cpp" />
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat2x2f.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat3x3f.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Mat4x4f.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Quaternion.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Cgla\statistics.cpp" />
+    <ClCompile Include="..\..\Libsrc\CGLA\TableTrigonometry.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec2f.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec2i.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec3f.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\CGLA\Vec3i.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/CGLA</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Common\RootSolvers.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/Common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/Common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Components\BinSave.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/Components</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/Components</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Components\Parse.cpp" />
+    <ClCompile Include="..\..\Libsrc\Components\ResourceLoader.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/Components</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/Components</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Graphics\DisplayText.cpp" />
+    <ClCompile Include="..\..\Libsrc\Graphics\PPMBitmap.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/Graphics</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/Graphics</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\Graphics\TrackBall.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../include;../../include/Graphics</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../include;../../include/Graphics</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\ImageLoader.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\IndexedFaceSet.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraph.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraphLoader.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\SceneGraphTools.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\TextureLoader.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\TGA.cpp" />
+    <ClCompile Include="..\..\Libsrc\X3DSceneGraph\Tools.cpp" />
+    <ClCompile Include="..\..\Libsrc\Geometry\AABB.cpp" />
+    <ClCompile Include="..\..\Libsrc\Geometry\AABBTools.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\AdjFace.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\AdjFaceList.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\draw.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\Instance.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\load_mesh.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\Material.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\obj_load.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\Object.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\OneRing.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\OneRingDB.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\Texmap.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\TriMesh.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\vrml_save.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\x3d_load.cpp" />
+    <ClCompile Include="..\..\Libsrc\BMesh\X3DBMesh.cpp" />
+    <ClCompile Include="..\..\Libsrc\glew\glew.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
