@@ -52,3 +52,11 @@ Frameworks/render02562/cmake-build-release/.ninja_deps
 Frameworks/render02562/cmake-build-release/.ninja_log
 Frameworks/render02562/cmake-build-release/Testing/Temporary/LastTest.log
 *.log
+
+
+# Folders
+.vs/
+.vscode/
+build/
+Debug/
+Release/

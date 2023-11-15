@@ -175,8 +175,8 @@ int main(int argc, char** argv)
 
 	// Mesh the model (replace the following two lines)
 	Mesher::mesh(loaded_vertices, loaded_polygons, vertices, polygons, patch_subdiv_size, light_subdiv_size);
-	//polygons = loaded_polygons;
-	//vertices = loaded_vertices;
+	/*polygons = loaded_polygons;
+	vertices = loaded_vertices;*/
 
   // Init hemicube
 	hemicube = new Hemicube(hemicube_size);

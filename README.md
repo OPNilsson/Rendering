@@ -48,15 +48,19 @@ Now CLION should be able to compile and run the code.
 The following are screenshots showing what the render engine is capable of including the rendering of the [Cornell Box](https://www.graphics.cornell.edu/online/box/) raytracing benchmark scene. 
 
 ### Cornell Box
+
+#### Path Tracing Result
 ![cornellBox](https://user-images.githubusercontent.com/45008469/206875979-2c2f5151-9c01-4801-aa6f-66fd0b40a9fc.png)
 
+#### Radiosity Result
+![cornellBox_radiosity]()
 
 ### Photon Mapping
 ![Photton](https://user-images.githubusercontent.com/45008469/206875971-68dad9a3-bbaa-4afd-8d39-5b82b6812406.png)
 
 
 ### Smooth vs Flat Shading of Utah Teapot
-Flat Shading            |  Smooth Shading
-:-------------------------:|:-------------------------:
- ![flat](https://user-images.githubusercontent.com/45008469/206875950-1c6e9b66-35af-4dc0-a2e5-f3c236c0ceb0.png) | ![smooth](https://user-images.githubusercontent.com/45008469/206875958-eb177410-9f9b-4d76-9310-44bc5270ca82.png)
+|                                                  Flat Shading                                                  |                                                  Smooth Shading                                                  |
+| :------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
+| ![flat](https://user-images.githubusercontent.com/45008469/206875950-1c6e9b66-35af-4dc0-a2e5-f3c236c0ceb0.png) | ![smooth](https://user-images.githubusercontent.com/45008469/206875958-eb177410-9f9b-4d76-9310-44bc5270ca82.png) |
 
