@@ -64,16 +64,15 @@ void displayMyPolygons() {
 // --------------------------------------------------
 
 void display() {
-	unsigned int ITERATIONS = 10;
-	for (unsigned int i = 0; i < ITERATIONS; i++) {
-		// Determine which way to compute form factors
-		if (use_hemicube)
-			distributeEnergy(calcFF(hemicube));
-		else
-			distributeEnergy(calcAnalyticalFF());
+	
+	// Determine which way to compute form factors
+	if (use_hemicube)
+		distributeEnergy(calcFF(hemicube));
+	else
+		distributeEnergy(calcAnalyticalFF());
 
-		colorReconstruction();
-	}
+	colorReconstruction();
+	
 
 	glViewport(0, 0, screen_size, screen_size);
 	ball->do_spin();
