@@ -53,7 +53,7 @@ The following are screenshots showing what the render engine is capable of inclu
 ![cornellBox](https://user-images.githubusercontent.com/45008469/206875979-2c2f5151-9c01-4801-aa6f-66fd0b40a9fc.png)
 
 #### Radiosity Result
-![cornellBox_radiosity]()
+![cornellBox_radiosity](https://github.com/OPNilsson/Rendering/blob/1b3a90fa751cf2642b90e7ee676044fb1472a102/Attachments/Radiosity.gif)
 
 ### Photon Mapping
 ![Photton](https://user-images.githubusercontent.com/45008469/206875971-68dad9a3-bbaa-4afd-8d39-5b82b6812406.png)
