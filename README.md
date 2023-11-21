@@ -1,7 +1,7 @@
 # Rendering
-02562 Rendering Course - Raytracing Engine Implementation    
+Raytracing Engine    
 
-This course was a development course in where the students where required to develop a raytracing rendering engine. The engine should be able to handle the following techniques that where presented in throughout the course:
+This render engine was development as the main part of a course in where the students where required to develop a raytracing rendering engine. The engine is be able to handle the following techniques that where presented in throughout the course:
 
 - Ray Interceptions with sphere, plane, and triangle objects.
 - Lambertian Shading of objects.
@@ -22,14 +22,14 @@ This course was a development course in where the students where required to dev
 - Bougouer's Law Absorption.
 - Photton Mapping for shading with the use of emitting photons.
 
-A lab journal indicating how each of the above methods were created along side the implementation for each part. The journal goes over my thoughts on implementing each part and is used as a proof of deliverables for each of the course's labs. The journal has screenshots also showing the different techniques explored along mathematical concepts learned in the course. There is also a project journal which is a report over the implementation of the concept that the student was requried to implement outside of the afore mentioned concepts. The entire implementation of this engine has been done individually with only ocational help from TA's and peers in the lectures. 
+A lab journal indicating how each of the above methods were created along side the implementation for each part. The journal goes over my thoughts on implementing each part and is used as a proof of the above deliverables. The journal has screenshots also showing the different techniques explored along mathematical concepts learned in the course. There is also a project journal which is a report over the implementation of the radiosity function of the engine. The entire implementation of this engine has been studied for and implemented individually. 
 
-This course also goes well with the 02561 Computer Graphics course at DTU see Github repo for more.
+See my WebGL journal for a look into other rendering techniques such as; stencil, bilboards, sciscor planes, and reflection planes.
 
 ---
 
 ## Intructions on getting the code to compile and run:
-Download the MinGW version of [FreeGLUT](https://www.transmissionzero.co.uk/software/freeglut-devel/) and place it somewhere on the PC this is a required dependency for the code to work. The compiler that is confirmed to build and run the code is CLION. Follow the steps below to run the code:
+Download the MinGW version of [FreeGLUT](https://www.transmissionzero.co.uk/software/freeglut-devel/) and place it somewhere on the PC this is a required dependency for the code to work. The IDE that is confirmed to build and run the code sucessfully are CLION and VSCode. Follow the steps below to run the code:
 
 - Open the FindMyGLUT.cmake file in the cmake folder of the framework. 
 - In FIND_PATH, replace `{PROJECT_SOURCE_DIR}/3rdparty/include` with the path to your freeglut (e.g. `C:/programs/freeglut/include`).
