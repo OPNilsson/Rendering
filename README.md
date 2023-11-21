@@ -1,6 +1,4 @@
-# Rendering
-Raytracing Engine    
-
+# Raytracing / Radiosity Engine
 This render engine was development as the main part of a course in where the students where required to develop a raytracing rendering engine. The engine is be able to handle the following techniques that where presented in throughout the course:
 
 - Ray Interceptions with sphere, plane, and triangle objects.
